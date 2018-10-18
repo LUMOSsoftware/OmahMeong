@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-header #navbar li a {
   font-family: "PT Sans", Arial, serif;
-  color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   position: relative;
   font-size: 16px;
   font-weight: 400;
@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 #fh5co-header #navbar li a:hover {
-  color: #000;
+  color: #9933ff;
 }
 #fh5co-header #navbar li a:hover span:before {
   visibility: visible;
@@ -137,14 +137,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 480px) {
   #fh5co-header #navbar li.active a {
-    color: #FA5555;
+    color: #ffffff;
   }
 }
 #fh5co-header #navbar li.active a span:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
-  background-color: #FA5555;
+  background-color: #9933ff;
 }
 @media screen and (max-width: 480px) {
   #fh5co-header #navbar li.active a span:before {
@@ -159,13 +159,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 992px) and (max-width: 480px) {
   #fh5co-header #navbar li.active a {
-    color: #FA5555;
+    color: #9933ff;
   }
 }
 @media screen and (max-width: 992px) {
   #fh5co-header #navbar li.active a span {
     display: inline-block;
-    color: #FA5555;
+    color: #9933ff;
   }
   #fh5co-header #navbar li.active a span:before {
     bottom: 0;
@@ -201,11 +201,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 #fh5co-header #navbar li.call-to-action a.log-in {
-  border: 2px solid #FA5555;
-  background: #FA5555;
+  border: 2px solid #9933ff;
+  background: #9933ff;
 }
 #fh5co-header #navbar li.call-to-action a.log-in:hover {
-  background: #FA5555;
+  background: #7300e6;
   color: #fff;
 }
 #fh5co-header .navbar-brand {
@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   font-weight: 700;
   padding-left: 28px;
-  color: #535659;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 3px;
   position: relative;
@@ -252,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-header.navbar-fixed-top {
   position: fixed !important;
-  background: #fff;
+  background: #9933ff;
   -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
 }
 #fh5co-header.navbar-fixed-top .navbar-brand {
-  color: #535659;
+  color: #fff;
 }
 #fh5co-header.navbar-fixed-top #navbar li a {
   -webkit-transition: 0.3s;
@@ -330,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-header .navbar-default {
   border: transparent;
-  background: #fff;
+  background: #000000;
   margin: 0;
   padding-left: 50px;
   padding-right: 50px;
@@ -353,7 +353,7 @@ h1, h2, h3, h4, h5, h6 {
   background-attachment: fixed;
   position: relative;
   width: 100%;
-  background-color: #e6e6e6;
+  background-color: #9933ff
   color: #fff;
 }
 #fh5co-home a {
@@ -388,14 +388,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-home .text-inner h1 {
   font-size: 48px;
-  text-transform: uppercase;
   color: white;
   margin: 0 0 20px 0;
   font-weight: 400;
   line-height: 58px;
 }
 #fh5co-home .text-inner h1 span {
-  color: #FA5555;
+  color: #fff;
+  font-family: Righteous;
+    src: url(https://fonts.google.com/specimen/Righteous);
 }
 #fh5co-home .text-inner h2 {
   font-size: 20px;
@@ -1241,7 +1242,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-  background: #FA5555;
+  background: #fff;
 }
 .fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
   outline: none;

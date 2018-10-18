@@ -1629,6 +1629,7 @@ mark,
 
 .text-uppercase, .initialism {
   text-transform: uppercase;
+  color: #fff;
 }
 
 .text-capitalize {
@@ -5020,7 +5021,7 @@ tbody.collapse.in {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #fff;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #333;
