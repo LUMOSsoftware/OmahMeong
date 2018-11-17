@@ -9,21 +9,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <!-- Bootstrap CSS-->
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link href="<?php echo base_url();?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font Awesome CSS-->
-  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link href="<?php echo base_url();?>/assets/vendor/font-awesome/css/font-awesome.min.css"rel="stylesheet">
   <!-- Google fonts - Poppins-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+  <link href="<?php echo base_url();?>/assets/https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
   <!-- Lightbox-->
-  <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.css">
+  <link href="<?php echo base_url();?>/assets/vendor/lightbox2/css/lightbox.css" rel="stylesheet">
   <!-- Custom font icons-->
-  <link rel="stylesheet" href="css/fontastic.css">
+  <link href="<?php echo base_url();?>/assets/css/fontastic.css" rel="stylesheet">
   <!-- theme stylesheet-->
-  <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+  <link href="<?php echo base_url();?>/assets/css/style.default.css" id="theme-stylesheet" rel="stylesheet">
   <!-- Custom stylesheet - for your changes-->
-  <link rel="stylesheet" href="css/custom.css">
+  <link href="<?php echo base_url();?>/assets/css/custom.css" rel="stylesheet">
   <!-- Favicon-->
-  <link rel="shortcut icon" href="img/icon.png">
+  <link href="<?php echo base_url();?>/assets/img/icon.png" rel="shortcut icon">
   <!-- Tweaks for older IEs-->
   <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -34,16 +34,16 @@
   <!-- navbar-->
   <header class="header">
     <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container"><a href="./" class="navbar-brand"><img src="img/logo.png" alt="" class="img-fluid"></a>
+      <div class="container"><a href="./" class="navbar-brand"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <!-- Link-->
-            <li class="nav-item"> <a href="index.html" class="nav-link active">Beranda</a></li>
+            <li class="nav-item"> <a href="assets/index.html" class="nav-link active">Beranda</a></li>
             <!-- Link-->
-            <li class="nav-item"> <a href="faq.html" class="nav-link">Artikel</a></li>
-            <li class="nav-item dropdown"><a id="pages" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Pelayanan</a>
-              <div class="dropdown-menu"><a href="faq.html" class="dropdown-item">FAQ</a><a href="contact.html" class="dropdown-item">Contact</a><a href="text.html" class="dropdown-item">Text Page</a></div>
+            <li class="nav-item"> <a href="assets/faq.html" class="nav-link">Artikel</a></li>
+            <li class="nav-item dropdown"><a id="pages" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Jenis Pelayanan</a>
+              <div class="dropdown-menu"><a href="assets/faq.html" class="dropdown-item">FAQ</a><a href="assets/contact.html" class="dropdown-item">Groming</a><a href="assets/text.html" class="dropdown-item">Rawat Jalan</a></div>
             </li>
           </ul><a href="#" data-toggle="modal" data-target="#login" class="btn btn-primary navbar-btn ml-0 ml-lg-3">MASUK</a>
         </div>
@@ -76,7 +76,7 @@
         <p class="lead text-muted mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p><a href="#" class="btn btn-primary">Learn More</a>
       </div>
       <div class="row">
-        <div class="col-lg-7 mx-auto mt-5"><img src="img/illustration-1.svg" alt="..." class="intro-image img-fluid"></div>
+        <div class="col-lg-7 mx-auto mt-5"><img src="assets/img/illustration-1.svg" alt="..." class="intro-image img-fluid"></div>
       </div>
     </div>
   </section>
@@ -108,42 +108,42 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="box text-center">
-              <div class="icon d-flex align-items-end"><img src="img/monitor.svg" alt="..." class="img-fluid"></div>
+              <div class="icon d-flex align-items-end"><img src="assets/img/monitor.svg" alt="..." class="img-fluid"></div>
               <h3 class="h4">Web desgin</h3>
               <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="box text-center">
-              <div class="icon d-flex align-items-end"><img src="img/target.svg" alt="..." class="img-fluid"></div>
+              <div class="icon d-flex align-items-end"><img src="assets/img/target.svg" alt="..." class="img-fluid"></div>
               <h3 class="h4">Print</h3>
               <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="box text-center">
-              <div class="icon d-flex align-items-end"><img src="img/chat.svg" alt="..." class="img-fluid"></div>
+              <div class="icon d-flex align-items-end"><img src="assets/img/chat.svg" alt="..." class="img-fluid"></div>
               <h3 class="h4">SEO and SEM</h3>
               <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="box text-center">
-              <div class="icon d-flex align-items-end"><img src="img/idea.svg" alt="..." class="img-fluid"></div>
+              <div class="icon d-flex align-items-end"><img src="assets/img/idea.svg" alt="..." class="img-fluid"></div>
               <h3 class="h4">Consulting</h3>
               <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="box text-center">
-              <div class="icon d-flex align-items-end"><img src="img/coffee-cup.svg" alt="..." class="img-fluid"></div>
+              <div class="icon d-flex align-items-end"><img src="assets/img/coffee-cup.svg" alt="..." class="img-fluid"></div>
               <h3 class="h4">Email Marketing</h3>
               <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="box text-center">
-              <div class="icon d-flex align-items-end"><img src="img/pen.svg" alt="..." class="img-fluid"></div>
+              <div class="icon d-flex align-items-end"><img src="assets/img/pen.svg" alt="..." class="img-fluid"></div>
               <h3 class="h4">UX &amp; UI</h3>
               <p class="text-small font-weight-light">Lorem Ipsum has been the industry's standard dummy text ever.</p>
             </div>
@@ -165,12 +165,12 @@
       </div>
       <div class="clients mt-5">
         <div class="row">
-          <div class="col-lg-2"><img src="img/client-1.svg" alt="" class="client-image img-fluid"></div>
-          <div class="col-lg-2"><img src="img/client-2.svg" alt="" class="client-image img-fluid"></div>
-          <div class="col-lg-2"><img src="img/client-3.svg" alt="" class="client-image img-fluid"></div>
-          <div class="col-lg-2"><img src="img/client-4.svg" alt="" class="client-image img-fluid"></div>
-          <div class="col-lg-2"><img src="img/client-5.svg" alt="" class="client-image img-fluid"></div>
-          <div class="col-lg-2"><img src="img/client-6.svg" alt="" class="client-image img-fluid"></div>
+          <div class="col-lg-2"><img src="assets/img/client-1.svg" alt="" class="client-image img-fluid"></div>
+          <div class="col-lg-2"><img src="assets/img/client-2.svg" alt="" class="client-image img-fluid"></div>
+          <div class="col-lg-2"><img src="assets/img/client-3.svg" alt="" class="client-image img-fluid"></div>
+          <div class="col-lg-2"><img src="assets/img/client-4.svg" alt="" class="client-image img-fluid"></div>
+          <div class="col-lg-2"><img src="assets/img/client-5.svg" alt="" class="client-image img-fluid"></div>
+          <div class="col-lg-2"><img src="assets/img/client-6.svg" alt="" class="client-image img-fluid"></div>
         </div>
       </div>
     </div>
@@ -200,7 +200,7 @@
             </div>
           </div><a href="#" class="btn btn-primary">Learn More</a>
         </div>
-        <div class="col-lg-5 mt-5 mt-lg-0"><img src="img/illustration-2.svg" alt="" class="divider-image img-fluid"></div>
+        <div class="col-lg-5 mt-5 mt-lg-0"><img src="assets/img/illustration-2.svg" alt="" class="divider-image img-fluid"></div>
       </div>
     </div>
   </section>
@@ -213,12 +213,12 @@
       </div>
       <div class="portfolio mt-5">
         <div class="row">
-          <div class="col-lg-4 p-0"><a href="img/portfolio-1.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="img/portfolio-1.jpg" alt="image" class="img-fluid"></a></div>
-          <div class="col-lg-4 p-0"><a href="img/portfolio-2.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="img/portfolio-2.jpg" alt="image" class="img-fluid"></a></div>
-          <div class="col-lg-4 p-0"><a href="img/portfolio-3.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="img/portfolio-3.jpg" alt="image" class="img-fluid"></a></div>
-          <div class="col-lg-4 p-0"><a href="img/portfolio-4.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="img/portfolio-4.jpg" alt="image" class="img-fluid"></a></div>
-          <div class="col-lg-4 p-0"><a href="img/portfolio-5.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="img/portfolio-5.jpg" alt="image" class="img-fluid"></a></div>
-          <div class="col-lg-4 p-0"><a href="img/portfolio-6.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="img/portfolio-6.jpg" alt="image" class="img-fluid"></a></div>
+          <div class="col-lg-4 p-0"><a href="assets/img/portfolio-1.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="assets/img/portfolio-1.jpg" alt="image" class="img-fluid"></a></div>
+          <div class="col-lg-4 p-0"><a href="assets/img/portfolio-2.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="assets/img/portfolio-2.jpg" alt="image" class="img-fluid"></a></div>
+          <div class="col-lg-4 p-0"><a href="assets/img/portfolio-3.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="assets/img/portfolio-3.jpg" alt="image" class="img-fluid"></a></div>
+          <div class="col-lg-4 p-0"><a href="assets/img/portfolio-4.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="assets/img/portfolio-4.jpg" alt="image" class="img-fluid"></a></div>
+          <div class="col-lg-4 p-0"><a href="assets/img/portfolio-5.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="assets/img/portfolio-5.jpg" alt="image" class="img-fluid"></a></div>
+          <div class="col-lg-4 p-0"><a href="assets/img/portfolio-6.jpg" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="assets/img/portfolio-6.jpg" alt="image" class="img-fluid"></a></div>
         </div>
       </div>
     </div>
@@ -248,15 +248,15 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-3 mb-5 mb-lg-0">
-          <div class="footer-logo"><img src="img/logo-footer.svg" alt="..." class="img-fluid"></div>
+          <div class="footer-logo"><img src="assets/img/logo-footer.svg" alt="..." class="img-fluid"></div>
         </div>
         <div class="col-lg-3 mb-5 mb-lg-0">
           <h5 class="footer-heading">Site pages</h5>
           <ul class="list-unstyled">
-            <li> <a href="index.html" class="footer-link">Home</a></li>
-            <li> <a href="faq.html" class="footer-link">FAQ</a></li>
-            <li> <a href="contact.html" class="footer-link">Contact</a></li>
-            <li> <a href="text.html" class="footer-link">Text Page</a></li>
+            <li> <a href="assets/index.html" class="footer-link">Home</a></li>
+            <li> <a href="assets/faq.html" class="footer-link">FAQ</a></li>
+            <li> <a href="assets/contact.html" class="footer-link">Contact</a></li>
+            <li> <a href="assets/text.html" class="footer-link">Text Page</a></li>
           </ul>
         </div>
         <div class="col-lg-3 mb-5 mb-lg-0">
@@ -304,27 +304,28 @@
         <div class="modal-body p-4 p-lg-5">
           <form action="#" class="login-form text-left">
             <div class="form-group mb-4">
-                <label>Username</label>
-                <input type="text" name="Username" placeholder="Masukan Username" class="form-control" id="Username">
-                </div>
-                <div class="form-group mb-4">
-                <label>Password</label>
-                <input type="password" name="password" placeholder="Min 8 characters" class="form-control" id="password">
-                </div>
-                <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-primary" a href="assets/setelahlogin.html" class="btn btn-primary">
+              <label>Username</label>
+              <input type="text" name="Username" placeholder="Masukan Username" class="form-control" id="Username">
+            </div>
+            <div class="form-group mb-4">
+              <label>Password</label>
+              <input type="password" name="password" placeholder="Min 8 characters" class="form-control" id="password">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Submit" class="btn btn-primary" a href="assets/setelahlogin.html">
+            </div>
           </form>
         </div>
       </div>
     </div>
   </div>
   <!-- JavaScript files-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/popper.js/umd/popper.min.js"> </script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-  <script src="vendor/lightbox2/js/lightbox.js"></script>
-  <script src="js/front.js"></script>
+  <script src="<?php echo base_url();?>/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>/assets/vendor/popper.js/umd/popper.min.js"> </script>
+  <script src="<?php echo base_url();?>/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url();?>/assets/vendor/jquery.cookie/jquery.cookie.js"> </script>
+  <script src="<?php echo base_url();?>/assets/vendor/lightbox2/js/lightbox.js"></script>
+  <script src="<?php echo base_url();?>/assets/js/front.js"></script>
   <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
 </body>
 
