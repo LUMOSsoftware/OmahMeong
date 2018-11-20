@@ -244,31 +244,30 @@
       </div>
     </div>
   </section>
-  <footer class="main-footer">
+    <footer class="main-footer" style="">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 mb-5 mb-lg-0">
-          <div class="footer-logo"><img src="assets/img/logo-footer.svg" alt="..." class="img-fluid"></div>
+        <div class="col-lg-3 mb-5 mb-lg-0" style="">
+          <div class="footer-logo"><img src="assets/img/logo.png" alt="..." class="img-fluid" style=""></div>
         </div>
-        <div class="col-lg-3 mb-5 mb-lg-0">
+        <div class="col-lg-3 mb-5 mb-lg-0" style="">
           <h5 class="footer-heading">Site pages</h5>
           <ul class="list-unstyled">
-            <li> <a href="assets/index.html" class="footer-link">Home</a></li>
-            <li> <a href="assets/faq.html" class="footer-link">FAQ</a></li>
-            <li> <a href="assets/contact.html" class="footer-link">Contact</a></li>
-            <li> <a href="assets/text.html" class="footer-link">Text Page</a></li>
+            <li> <a href="index.html" class="footer-link">Home</a></li>
+            <li> <a href="faq.html" class="footer-link">FAQ</a></li>
+            <li> <a href="contact.html" class="footer-link">Contact</a></li>
+            <li> <a href="text.html" class="footer-link">Text Page</a></li>
           </ul>
         </div>
-        <div class="col-lg-3 mb-5 mb-lg-0">
-          <h5 class="footer-heading">Product</h5>
+        <div class="col-lg-3 mb-5 mb-lg-0" style="">
+          <h5 class="footer-heading">Pelayanan</h5>
           <ul class="list-unstyled">
-            <li> <a href="#" class="footer-link">Why Appton?</a></li>
-            <li> <a href="#" class="footer-link">Enterprise</a></li>
-            <li> <a href="#" class="footer-link">Blog</a></li>
-            <li> <a href="#" class="footer-link">Pricing</a></li>
+            <li> <a href="#" class="footer-link">🏥Animal Health&nbsp;&nbsp;</a></li>
+            <li> <a href="#" class="footer-link">🛁Cat Salon</a></li>
+            <li> <a href="#" class="footer-link">🏠Cat Hotel</a></li>
           </ul>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3" style="">
           <h5 class="footer-heading">Resources</h5>
           <ul class="list-unstyled">
             <li> <a href="#" class="footer-link">Download</a></li>
@@ -282,19 +281,29 @@
     <div class="copyrights">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 text-center text-lg-left">
+          <div class="col-lg-12 text-center text-lg-left">
             <p class="copyrights-text mb-3 mb-lg-0">© All rights reserved. Appton.co. Design by <a href="https://bootstrapious.com/landing-pages" class="external footer-link">Bootstrapious </a></p>
             <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-          </div>
-          <div class="col-lg-6 text-center text-lg-right">
-            <ul class="list-inline social mb-0">
-              <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook"></i></a><a href="#" class="social-link"><i class="fa fa-twitter"></i></a><a href="#" class="social-link"><i class="fa fa-youtube-play"></i></a><a href="#" class="social-link"><i class="fa fa-vimeo"></i></a><a href="#" class="social-link"><i class="fa fa-pinterest"></i></a></li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <div class="py-5 text-white bg-dark" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center align-self-center p-4">
+          <p class="mb-5"><span style="font-weight: 600;">OMAH MEONG Animal Care</span><br>Jl.Manggis no.46 Kreongan&nbsp;<br>Patrang JEMBER - INDONESIA&nbsp;<br>Phone/SMS/WA : 082233481078</p>
+          <div class="row">
+            <div class="col-md-12 d-flex align-items-center justify-content-around"> <a href="https://www.instagram.com/omahmeongofficial/?hl=id">
+                <i class="d-block fa fa-instagram text-light fa-lg"> omahmeongofficial</i>
+              </a> </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-0"> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15797.778274793982!2d113.7058591!3d-8.1578841!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcc7e2968b359f265!2sOmah+Meong+Animal+care!5e0!3m2!1sid!2sid!4v1540092995547" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen=""></iframe></div>
+      </div>
+    </div>
+  </div>
   <div id="login" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg" style="">
     <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
