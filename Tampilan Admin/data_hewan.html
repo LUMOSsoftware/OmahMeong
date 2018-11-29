@@ -151,47 +151,44 @@
                     <table class="table">
                       <thead class="thead-dark">
                         <tr>
-                          <th scope="col" class="text-center">No.</th>
-                          <th scope="col" class="text-left">ID Hewan</th>
-                          <th scope="col" class="text-left">Nama Hewan</th>
-                          <th scope="col" class="text-center">Jenis Hewan</th>
-                          <th scope="col" class="text-center">Jenis Kelamin Hewan</th>
-                          <th scope="col" class="text-center">Umur Hewan</th>
-                          <th scope="col" class="text-center">Ciri Spesifik</th>
-                          <th scope="col" class="text-center">ID Pemilik</th>
-                          <th scope="col" class="text-center">Nama Pemilik</th>
-                          <th scope="col" class="text-center">Aksi</th>
+                          <th scope="col" class="align-middle text-center">No.</th>
+                          <th scope="col" class="align-middle text-center">ID Hewan</th>
+                          <th scope="col" class="align-middle text-center">Nama Hewan</th>
+                          <th scope="col" class="align-middle text-center">Jenis Hewan</th>
+                          <th scope="col" class="align-middle text-center">Jenis Kelamin Hewan</th>
+                          <th scope="col" class="align-middle text-center">Umur Hewan</th>
+                          <th scope="col" class="align-middle text-center">Ciri Spesifik</th>
+                          <th scope="col" class="align-middle text-center">ID Pemilik</th>
+                          <th scope="col" class="align-middle text-center">Nama Pemilik</th>
+                          <th scope="col" class="align-middle text-center" colspan="2">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row" class="text-center">1</th>
-                          <td class="text-left">H001</td>
-                          <td class="text-left">Coki</td>
-                          <td class="text-center">Kucing Persia</td>
-                          <td class="text-center">Jantan</td>
-                          <td class="text-center">1 tahun</td>
-                          <td class="text-center">Bulu Abu-abu</td>
-                          <td class="text-center">P001</td>
-                          <td class="text-center">Mark</td>
-                          <td>
-                          <a href="#" class="btn btn-primary text-center">Edit</a>
-                          <a href="#" class="btn btn-danger text-center">Hapus</a>
-                          </td>
+                          <th scope="row" class="text-center align-middle">1</th>
+                          <td class="text-left align-middle">H001</td>
+                          <td class="text-left align-middle">Coki</td>
+                          <td class="text-center align-middle">Kucing Persia</td>
+                          <td class="text-center align-middle">Jantan</td>
+                          <td class="text-center align-middle">1 tahun</td>
+                          <td class="text-center align-middle">Bulu Abu-abu</td>
+                          <td class="text-center align-middle">P001</td>
+                          <td class="text-center align-middle">Mark</td>
+                          <td class="text-center"><a href="#" class="btn btn-primary text-center">Edit</a></td>
+                          <td><a href="#" class="btn btn-danger text-center">Hapus</a></td>
                         </tr>
                         <tr>
-                          <th scope="row" class="text-center">2</th>
-                          <td class="text-left">H002</td>
-                          <td class="text-left">Ciko</td>
-                          <td class="text-center">Kucing Scootishfold</td>
-                          <td class="text-center">Betina</td>
-                          <td class="text-center">2 tahun</td>
-                          <td class="text-center">Bulu Putih Abu-abu</td>
-                          <td class="text-center">P002</td>
-                          <td class="text-center">Jacob</td>
-                          <td><a href="#" class="btn btn-primary text-center">Edit</a>
-                          <a href="#" class="btn btn-danger text-center">Hapus</a>
-                          </td>
+                          <th scope="row" class="text-center align-middle"">2</th>
+                          <td class="text-left align-middle">H002</td>
+                          <td class="text-left align-middle">Ciko</td>
+                          <td class="text-center align-middle">Kucing Scootishfold</td>
+                          <td class="text-center align-middle">Betina</td>
+                          <td class="text-center align-middle">2 tahun</td>
+                          <td class="text-center align-middle">Bulu Putih Abu-abu</td>
+                          <td class="text-center align-middle">P002</td>
+                          <td class="text-center align-middle">Jacob</td>
+                          <td class="text-center align-middle"><a href="#" class="btn btn-primary text-center">Edit</a></td>
+                          <td><a href="#" class="btn btn-danger text-center">Hapus</a></td>
                         </tr>
                       </tbody>
                       <tbody></tbody>
@@ -252,8 +249,16 @@
           </div>
 
           <div class="form-group">
-              <h6>Umur Hewan</h6>
-              <input name="" class="form-control" placeholder="Masukkan Umur Hewan" id=""
+             <h6>Jenis Kelamin Hewan</h6>
+             <select name="" class="form-control form-control-lg" id="" required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+             <option selected>Jantan</option>
+             <option value="1">Betina</option>
+           </select>
+          </div>
+
+          <div class="form-group">
+              <h6>Umur Hewan (Tahun)</h6>
+              <input name="" maxlength="2" onkeypress="return hanyaAngka(event)" class="form-control" placeholder="Masukkan Umur Hewan" id=""
               required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
@@ -263,25 +268,26 @@
               required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
-          <div class="form-group">
-             <h6>Jenis Kelamin Hewan</h6>
-             <select name="" class="form-control form-control-lg" id="" required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
-             <option selected>Jantan</option>
-             <option value="1">Betina</option>
-           </select>
-          </div>
+          
           <hr class="my-4">
           <h5 class="modal-title w-100 font-weight-bold text-center">Data Pemilik Hewan</h5><br>
+
+          <div class="form-group">
+              <h6>ID Pemilik</h6>
+              <input name="" maxlength="5" class="form-control" placeholder="Masukkan ID Pemilik" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
           <div class="form-group">
               <h6>Nama Pemilik</h6>
-              <input name="" class="form-control" placeholder="Masukkan Jenis Hewan" id=""
-              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+              <input readonly="" name="" class="form-control" placeholder="Nama Pemilik" id="">
           </div>
 
           </div>
     </form>
       <div class="modal-footer d-flex justify-content-center">
         <button type="submit" form="formtambahdatahewan" class="btn btn-success">Tambah <i class="fa fa-plus ml-1"></i></button>
+        <button type="reset" form="formtambahdatahewan" class="btn btn-danger">Hapus <i class="fa fa-trash"></i></button>
       </div>
     </div>
   </div>
@@ -289,6 +295,16 @@
 
 
 
+  <!-- input angka only -->
+  <script>
+    function hanyaAngka(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+        return false;
+      return true;
+    }
+  </script>
   <!-- offset area end -->
   <!-- jquery latest version -->
   <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
