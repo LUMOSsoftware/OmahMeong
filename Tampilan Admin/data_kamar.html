@@ -50,7 +50,8 @@
                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-database""></i><span>Data</span></a>
                 <ul class="collapse">
                   <li><a href="index.html">Data Pemilik</a></li>
-                  <li class="active"><a href="datahewan.html">Data Hewan</a></li>
+                  <li><a href="data_hewan.html">Data Hewan</a></li>
+                  <li class="active"><a href="data_kamar.html">Data Kamar</a></li>
                 </ul>
               </li>
               <li>
@@ -140,7 +141,7 @@
               <div class="card-body text-right">
                 <a href="#" class="btn btn-success text-justify m-2" data-toggle="modal" data-target="#dataHewan">+ Tambah Data</a>
                 <div class="d-sm-flex justify-content-between align-items-center">
-                  <h4 class="header-title mb-0">Data Hewan</h4>
+                  <h4 class="header-title mb-0">Data Kamar</h4>
                   <select class="custome-select border-0 pr-3">
                     <option selected="">Last 24 Hours</option>
                     <option value="0">01 July 2018</option>
@@ -151,37 +152,28 @@
                     <table class="table">
                       <thead class="thead-dark">
                         <tr>
-                          <th scope="col" class="text-center">No.</th>
-                          <th scope="col" class="text-left">ID Hewan</th>
-                          <th scope="col" class="text-left">Nama Hewan</th>
-                          <th scope="col" class="text-center">Jenis Hewan</th>
-                          <th scope="col" class="text-center">Jenis Kelamin Hewan</th>
-                          <th scope="col" class="text-center">Nama Pemilik</th>
+                          <th scope="col" class="text-center">ID Kamar</th>
+                          <th scope="col" class="text-center">Nomor Kamar</th>
                           <th scope="col" class="text-center">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <th scope="row" class="text-center">1</th>
-                          <td class="text-left">H001</td>
-                          <td class="text-left">Coki</td>
-                          <td class="text-center">Kucing Persia</td>
-                          <td class="text-center">Jantan</td>
-                          <td class="text-center">Mark</td>
-                          <td>
-                          <a href="#" class="btn btn-primary text-center">Edit</a>
-                          <a href="#" class="btn btn-danger text-center">Hapus</a>
+                          <td class="text-center">2</td>
+                          <td><center>
+                          <a href="#"  class="btn btn-primary text-center">Edit</a>
+                          <a href="#"  class="btn btn-danger text-center" >Hapus</a>
+                        </center>
                           </td>
                         </tr>
                         <tr>
-                          <th scope="row" class="text-center">2</th>
-                          <td class="text-left">H002</td>
-                          <td class="text-left">Ciko</td>
-                          <td class="text-center">Kucing Scootishfold</td>
-                          <td class="text-center">Betina</td>
-                          <td class="text-center">Jacob</td>
-                          <td><a href="#" class="btn btn-primary text-center">Edit</a>
-                          <a href="#" class="btn btn-danger text-center">Hapus</a>
+                          <th scope="row" class="text-center">1</th>
+                          <td class="text-center">2</td>
+                          <td><center>
+                            <a href="#" class="btn btn-primary text-center">Edit</a>
+                            <a href="#" class="btn btn-danger text-center">Hapus</a>
+                          </center>
                           </td>
                         </tr>
                       </tbody>
@@ -216,57 +208,24 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Tambah Data Hewan</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Data Kamar</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body mx-3">
-        <form action="" id="formtambahdatahewan">
+        <form action="" id="formtambahdatakamar">
         <div class="form-group">
-            <h5 class="modal-title w-100 font-weight-bold text-center">Data Hewan</h5><br>
-            <h6>ID Hewan</h6>
-            <input name="" maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Hewan" id=""
+            <h5 class="modal-title w-100 font-weight-bold text-center">Data Kamar</h5><br>
+            <h6>ID Kamar</h6>
+            <input name="" maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Kamar" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
           <div class="form-group">
-            <h6>Nama Hewan</h6>
-            <input  name="" class="form-control" type="text" placeholder="Masukkan Nama Hewan" id=""
+            <h6>Nomor Kamar</h6>
+            <input  name="" class="form-control" type="text" placeholder="Masukkan Kamar" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
-          </div>
-          
-          <div class="form-group">
-              <h6>Jenis Hewan</h6>
-              <input name="" class="form-control" placeholder="Masukkan Jenis Hewan" id=""
-              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
-          </div>
-
-          <div class="form-group">
-              <h6>Umur Hewan</h6>
-              <input name="" class="form-control" placeholder="Masukkan Umur Hewan" id=""
-              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
-          </div>
-
-          <div class="form-group">
-              <h6>Ciri Spesifik</h6>
-              <input name="" class="form-control" placeholder="Masukkan Ciri Spesifik Hewan" id=""
-              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
-          </div>
-
-          <div class="form-group">
-             <h6>Jenis Kelamin Hewan</h6>
-             <select name="" class="form-control form-control-lg" id="" required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
-             <option selected>Jantan</option>
-             <option value="1">Betina</option>
-           </select>
-          </div>
-          <hr class="my-4">
-          <h5 class="modal-title w-100 font-weight-bold text-center">Data Pemilik Hewan</h5><br>
-          <div class="form-group">
-              <h6>Nama Pemilik</h6>
-              <input name="" class="form-control" placeholder="Masukkan Jenis Hewan" id=""
-              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
           </div>
