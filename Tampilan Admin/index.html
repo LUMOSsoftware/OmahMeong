@@ -407,7 +407,7 @@
         <form id="formtambahdatapemilik">
         <div class="form-group">
             <h6>ID Pemilik Hewan</h6>
-            <input class="form-control" type="text" placeholder="Masukkan ID Pemilik" id=""
+            <input maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Pemilik" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
@@ -426,18 +426,30 @@
           
           <div class="form-group">
              <h6>No.HP</h6>
-             <input class="form-control" type="number" placeholder="Masukkan No.HP" id=""
+             <input maxlength="12" onkeypress="return hanyaAngka(event)" class="form-control"  placeholder="Masukkan No.HP" id=""
              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
         <button type="submit" form="formtambahdatapemilik" class="btn btn-success">Tambah <i class="fa fa-plus ml-1"></i></button>
+        <button type="reset" form="formtambahdatapemilik" class="btn btn-danger">Hapus <i class="fa fa-trash"></i></button>
       </div>
     </div>
   </div>
 </div>
 
+
+  <!-- input angka only -->
+  <script>
+    function hanyaAngka(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+        return false;
+      return true;
+    }
+  </script>
 
   <!-- offset area end -->
   <!-- jquery latest version -->
