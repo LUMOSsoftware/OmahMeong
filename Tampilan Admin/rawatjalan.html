@@ -140,7 +140,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-body text-right">
-                <a href="#" class="btn btn-success text-justify m-2">+ Tambah Data</a>
+                <a href="#" class="btn btn-success text-justify m-2" data-toggle="modal" data-target="#dataRawatJalan">+ Tambah Data</a>
                 <div class="d-sm-flex justify-content-between align-items-center">
                   <h4 class="header-title mb-0">Data Rawat Jalan</h4>
                   <select class="custome-select border-0 pr-3">
@@ -153,11 +153,18 @@
                     <table class="table">
                       <thead class="thead-dark">
                         <tr>
-                          <th scope="col" class="text-center">No.</th>
-                          <th scope="col" class="text-left">Nama Pemilik</th>
-                          <th scope="col" class="text-center">Alamat</th>
-                          <th scope="col" class="text-center">No. HP</th>
-                          <th scope="col" class="text-center">Aksi</th>
+                          <th scope="col" class="align-middle text-center">No.</th>
+                          <th scope="col" class="align-middle text-center">ID Rawat Jalan</th>
+                          <th scope="col" class="align-middle text-center">ID Layanan</th>
+                          <th scope="col" class="align-middle text-center">Nama Layanan</th>
+                          <th scope="col" class="align-middle text-center">ID Pemilik</th>
+                          <th scope="col" class="align-middle text-center">Nama Pemilik</th>
+                          <th scope="col" class="align-middle text-center">ID Hewan</th>
+                          <th scope="col" class="align-middle text-center">Nama Hewan</th>
+                          <th scope="col" class="align-middle text-center">Anamnesa</th>
+                          <th scope="col" class="align-middle text-center">Tanggal</th>
+                          <th scope="col" class="align-middle text-center">Keterangan</th>
+                          <th scope="col" class="align-middle text-center" colspan="2">Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -166,23 +173,15 @@
                           <td class="text-left">Mark</td>
                           <td class="text-center">Jl. Sumatra No.2</td>
                           <td class="text-center">081847988723</td>
-                          <td class="text-center"><a href="#" class="btn btn-primary text-center">Detail</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="text-center">2</th>
-                          <td class="text-left">Jacob</td>
-                          <td class="text-center">Jl. Kalimantan 7</td>
-                          <td class="text-center">089847948662</td>
-                          <td class="text-center"><a href="#" class="btn btn-primary text-center">Detail</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="text-center">3</th>
-                          <td class="text-left">Larry</td>
-                          <td class="text-center">Jl. Kalimantan 4</td>
-                          <td class="text-center">085634567112</td>
-                          <td class="text-center"><a href="#" class="btn btn-primary text-center">Detail</a></td>
+                          <td class="text-center">Data</td>
+                          <td class="text-center">Data</td>
+                          <td class="text-center">Data</td>
+                          <td class="text-center">Data</td>
+                          <td class="text-center">Data</td>
+                          <td class="text-center">Data</td>
+                          <td class="text-center">Data</td>
+                          <td class="text-center"><a href="#" class="btn btn-primary text-center" data-toggle="modal" data-target="#edit_dataRawatJalan">Edit</a></td>
+                          <td class="text-center"><a href="#" class="btn btn-danger text-center">Hapus</a></td>
                         </tr>
                       </tbody>
                       <tbody></tbody>
@@ -209,176 +208,197 @@
     <!-- footer area end-->
   </div>
   <!-- page container area end -->
-  <!-- offset area start -->
-  <div class="offset-area">
-    <div class="offset-close"><i class="ti-close"></i></div>
-    <ul class="nav offset-menu-tab">
-      <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
-      <li><a data-toggle="tab" href="#settings">Settings</a></li>
-    </ul>
-    <div class="offset-content tab-content">
-      <div id="activity" class="tab-pane fade in show active">
-        <div class="recent-activity">
-          <div class="timeline-task">
-            <div class="icon bg1">
-              <i class="fa fa-envelope"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Rashed sent you an email</h4>
-              <span class="time"><i class="ti-time"></i>09:35</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at. </p>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg2">
-              <i class="fa fa-check"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Added</h4>
-              <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur. </p>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg2">
-              <i class="fa fa-exclamation-triangle"></i>
-            </div>
-            <div class="tm-title">
-              <h4>You missed you Password!</h4>
-              <span class="time"><i class="ti-time"></i>09:20 Am</span>
-            </div>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg3">
-              <i class="fa fa-bomb"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Member waiting for you Attention</h4>
-              <span class="time"><i class="ti-time"></i>09:35</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at. </p>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg3">
-              <i class="ti-signal"></i>
-            </div>
-            <div class="tm-title">
-              <h4>You Added Kaji Patha few minutes ago</h4>
-              <span class="time"><i class="ti-time"></i>01 minutes ago</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at. </p>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg1">
-              <i class="fa fa-envelope"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Ratul Hamba sent you an email</h4>
-              <span class="time"><i class="ti-time"></i>09:35</span>
-            </div>
-            <p>Hello sir , where are you, i am egerly waiting for you. </p>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg2">
-              <i class="fa fa-exclamation-triangle"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Rashed sent you an email</h4>
-              <span class="time"><i class="ti-time"></i>09:35</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at. </p>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg2">
-              <i class="fa fa-exclamation-triangle"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Rashed sent you an email</h4>
-              <span class="time"><i class="ti-time"></i>09:35</span>
-            </div>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg3">
-              <i class="fa fa-bomb"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Rashed sent you an email</h4>
-              <span class="time"><i class="ti-time"></i>09:35</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at. </p>
-          </div>
-          <div class="timeline-task">
-            <div class="icon bg3">
-              <i class="ti-signal"></i>
-            </div>
-            <div class="tm-title">
-              <h4>Rashed sent you an email</h4>
-              <span class="time"><i class="ti-time"></i>09:35</span>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at. </p>
-          </div>
-        </div>
+  
+  <!-- offset area end -->
+<!--form input-->
+<div class="modal fade" id="dataRawatJalan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Tambah Data Rawat Jalan</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div id="settings" class="tab-pane fade">
-        <div class="offset-settings">
-          <h4>General Settings</h4>
-          <div class="settings-list">
-            <div class="s-settings">
-              <div class="s-sw-title">
-                <h5>Notifications</h5>
-                <div class="s-swtich">
-                  <input type="checkbox" id="switch1">
-                  <label for="switch1">Toggle</label>
-                </div>
-              </div>
-              <p>Keep it 'On' When you want to get all the notification.</p>
-            </div>
-            <div class="s-settings">
-              <div class="s-sw-title">
-                <h5>Show recent activity</h5>
-                <div class="s-swtich">
-                  <input type="checkbox" id="switch2">
-                  <label for="switch2">Toggle</label>
-                </div>
-              </div>
-              <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-            </div>
-            <div class="s-settings">
-              <div class="s-sw-title">
-                <h5>Show your emails</h5>
-                <div class="s-swtich">
-                  <input type="checkbox" id="switch3">
-                  <label for="switch3">Toggle</label>
-                </div>
-              </div>
-              <p>Show email so that easily find you.</p>
-            </div>
-            <div class="s-settings">
-              <div class="s-sw-title">
-                <h5>Show Task statistics</h5>
-                <div class="s-swtich">
-                  <input type="checkbox" id="switch4">
-                  <label for="switch4">Toggle</label>
-                </div>
-              </div>
-              <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
-            </div>
-            <div class="s-settings">
-              <div class="s-sw-title">
-                <h5>Notifications</h5>
-                <div class="s-swtich">
-                  <input type="checkbox" id="switch5">
-                  <label for="switch5">Toggle</label>
-                </div>
-              </div>
-              <p>Use checkboxes when looking for yes or no answers.</p>
-            </div>
+      <div class="modal-body mx-3">
+        <form action="" id="formtambahdatahewan">
+        <div class="form-group">
+            <h5 class="modal-title w-100 font-weight-bold text-center">Data Hewan</h5><br>
+            <h6>ID Hewan</h6>
+            <input name="" maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
-        </div>
+
+          <div class="form-group">
+            <h6>Nama Hewan</h6>
+            <input  readonly="" name="" class="form-control" type="text" placeholder="Masukkan Nama Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+          
+          <hr class="my-4">
+          <h5 class="modal-title w-100 font-weight-bold text-center">Data Pemilik Hewan</h5><br>
+
+          <div class="form-group">
+              <h6>ID Pemilik</h6>
+              <input name="" maxlength="5" class="form-control" placeholder="Masukkan ID Pemilik" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group">
+              <h6>Nama Pemilik</h6>
+              <input readonly="" name="" class="form-control" placeholder="Nama Pemilik" id="">
+          </div>
+
+          <hr class="my-4">
+          <h5 class="modal-title w-100 font-weight-bold text-center">Data Rawat Jalan</h5><br>
+
+          <div class="form-group">
+              <h6>ID Rawat Jalan</h6>
+              <input name="" maxlength="5" class="form-control" placeholder="Masukkan ID Pemilik" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group">
+              <h6>ID Layanan</h6>
+              <input name="" maxlength="5" class="form-control" placeholder="Masukkan ID Pemilik" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group">
+              <h6>Nama Layanan</h6>
+              <input readonly="" name="" class="form-control" placeholder="Nama Layanan"
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')" id="">
+          </div>
+
+           <div class="form-group">
+              <h6>Tanggal</h6>
+              <input type="datetime-local" name="" class="form-control"
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"  id="">
+          </div>
+
+          <div class="form-group">
+              <h6>Anamnesa</h6>
+              <textarea  class="form-control" placeholder="Masukkan Anamnesa" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"></textarea>
+          </div>
+         
+
+          <div class="form-group">
+              <h6>Keterangan</h6>
+              <textarea  class="form-control" placeholder="Masukkan Keterangan" id=""></textarea>
+          </div>
+
+          </div>
+    </form>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" form="formtambahdataRawatInap" class="btn btn-success">Tambah <i class="fa fa-plus ml-1"></i></button>
+        <button type="reset" form="formtambahdataRawatInap" class="btn btn-danger">Hapus <i class="fa fa-trash"></i></button>
       </div>
     </div>
   </div>
-  <!-- offset area end -->
+
+<!--form EDIT-->
+<div class="modal fade" id="edit_dataRawatJalan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Edit Data Rawat Jalan</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <form action="" id="formeditdatarawatinap">
+        <div class="form-group">
+      <h5 class="modal-title w-100 font-weight-bold text-center">Data Hewan</h5><br>
+            <h6>ID Hewan</h6>
+            <input name="" maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group">
+            <h6>Nama Hewan</h6>
+            <input  readonly="" name="" class="form-control" type="text" placeholder="Masukkan Nama Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+          
+          <hr class="my-4">
+          <h5 class="modal-title w-100 font-weight-bold text-center">Data Pemilik Hewan</h5><br>
+
+          <div class="form-group">
+              <h6>ID Pemilik</h6>
+              <input name="" maxlength="5" class="form-control" placeholder="Masukkan ID Pemilik" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group">
+              <h6>Nama Pemilik</h6>
+              <input readonly="" name="" class="form-control" placeholder="Nama Pemilik" id="">
+          </div>
+
+
+          <hr class="my-4">
+          <h5 class="modal-title w-100 font-weight-bold text-center">Data Rawat Jalan</h5><br>
+
+          <div class="form-group">
+              <h6>ID Rawat Jalan</h6>
+              <input name="" maxlength="5" class="form-control" placeholder="Masukkan ID Pemilik" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group">
+              <h6>ID Layanan</h6>
+              <input name="" maxlength="5" class="form-control" placeholder="Masukkan ID Pemilik" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group">
+              <h6>Nama Layanan</h6>
+              <input readonly="" name="" class="form-control" placeholder="Nama Layanan"
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')" id="">
+          </div>
+
+           <div class="form-group">
+              <h6>Tanggal</h6>
+              <input type="datetime-local" name="" class="form-control"
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"  id="">
+          </div>
+
+          <div class="form-group">
+              <h6>Anamnesa</h6>
+              <textarea  class="form-control" placeholder="Masukkan Anamnesa" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"></textarea>
+          </div>
+         
+
+          <div class="form-group">
+              <h6>Keterangan</h6>
+              <textarea  class="form-control" placeholder="Masukkan Keterangan" id=""></textarea>
+          </div>
+
+          </div>
+    </form>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" form="formeditdatarawatjalan" class="btn btn-success">Simpan <i class="fa fa-save"></i></button>
+        <button type="reset" form="formeditdatarawatjalan" class="btn btn-danger">Batal <i class="fa fa-close"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- input angka only -->
+  <script>
+    function hanyaAngka(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+        return false;
+      return true;
+    }
+  </script>
   <!-- jquery latest version -->
   <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
   <!-- bootstrap 4 js -->
