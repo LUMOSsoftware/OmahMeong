@@ -1,65 +1,106 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Datapemilik_model extends CI_Model
-{
-    private $omahmeong = "products";
-
-    public $id_pemilik;
-    public $nama_pemilik;
-    public $alamat;
-    public $no_hp;
-    public $username;
-    public $password;
-
-    public function rules()
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+ 
+class Datapemilik_model extends CI_Model {
+ 
+    var $table = 'tbl_pemilik';
+    var $column_order = array('id_pemilik','nama_pemilik','alamat','no_hp','username','password',null); //set column field database for datatable orderable
+    var $column_search = array('id_pemilik','nama_pemilik','alamat','no_hp','username'); //set column field database for datatable searchable just firstname , lastname , address are searchable
+    var $order = array('id' => 'desc'); // default order 
+ 
+    public function __construct()
     {
-        return [
-            ['field' => 'name',
-            'label' => 'Name',
-            'rules' => 'required'],
-
-            ['field' => 'price',
-            'label' => 'Price',
-            'rules' => 'numeric'],
-            
-            ['field' => 'description',
-            'label' => 'Description',
-            'rules' => 'required']
-        ];
+        parent::__construct();
+        $this->load->database();
     }
-
-    public function getAll()
+ 
+    private function _get_datatables_query()
     {
-        return $this->db->get($this->_table)->result();
+         
+        $this->db->from($this->table);
+ 
+        $i = 0;
+     
+        foreach ($this->column_search as $item) // loop column 
+        {
+            if($_POST['search']['value']) // if datatable send POST for search
+            {
+                 
+                if($i===0) // first loop
+                {
+                    $this->db->group_start(); // open bracket. query Where with OR clause better with bracket. because maybe can combine with other WHERE with AND.
+                    $this->db->like($item, $_POST['search']['value']);
+                }
+                else
+                {
+                    $this->db->or_like($item, $_POST['search']['value']);
+                }
+ 
+                if(count($this->column_search) - 1 == $i) //last loop
+                    $this->db->group_end(); //close bracket
+            }
+            $i++;
+        }
+         
+        if(isset($_POST['order'])) // here order processing
+        {
+            $this->db->order_by($this->column_order[$_POST['order']['0']['column']], $_POST['order']['0']['dir']);
+        } 
+        else if(isset($this->order))
+        {
+            $order = $this->order;
+            $this->db->order_by(key($order), $order[key($order)]);
+        }
     }
-    
-    public function getById($id)
+ 
+    function get_datatables()
     {
-        return $this->db->get_where($this->_table, ["product_id" => $id])->row();
+        $this->_get_datatables_query();
+        if($_POST['length'] != -1)
+        $this->db->limit($_POST['length'], $_POST['start']);
+        $query = $this->db->get();
+        return $query->result();
     }
-
-    public function save()
+ 
+    function count_filtered()
     {
-        $post = $this->input->post();
-        $this->product_id = uniqid();
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
-        $this->db->insert($this->_table, $this);
+        $this->_get_datatables_query();
+        $query = $this->db->get();
+        return $query->num_rows();
     }
-
-    public function update()
+ 
+    public function count_all()
     {
-        $post = $this->input->post();
-        $this->product_id = $post["id"];
-        $this->name = $post["name"];
-        $this->price = $post["price"];
-        $this->description = $post["description"];
-        $this->db->update($this->_table, $this, array('product_id' => $post['id']));
+        $this->db->from($this->table);
+        return $this->db->count_all_results();
     }
-
-    public function delete($id)
+ 
+    public function get_by_id($id)
     {
-        return $this->db->delete($this->_table, array("product_id" => $id));
+        $this->db->from($this->table);
+        $this->db->where('id_pemilik',$id);
+        $query = $this->db->get();
+ 
+        return $query->row();
     }
+ 
+    public function save($data)
+    {
+        $this->db->insert($this->table, $data);
+        return $this->db->insert_id();
+    }
+ 
+    public function update($where, $data)
+    {
+        $this->db->update($this->table, $data, $where);
+        return $this->db->affected_rows();
+    }
+ 
+    public function delete_by_id($id)
+    {
+        $this->db->where('id_pemilik', $id);
+        $this->db->delete($this->table);
+    }
+ 
+ 
 }

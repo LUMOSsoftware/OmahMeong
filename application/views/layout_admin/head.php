@@ -22,4 +22,9 @@
     <link href="<?php echo base_url();?>assets/admin/css/responsive.css" rel="stylesheet">
     <!-- modernizr css -->
     <script src="<?php echo base_url();?>assets/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- form-->
+    <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/datatables/css/dataTables.bootstrap.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')?>" rel="stylesheet">
 </head>
