@@ -15,6 +15,15 @@ class Datapemilik_model extends CI_Model
     $this->db->delete($table);
     }
 
+    function edit_data($where,$table){      
+    return $this->db->get_where($table,$where);
+    }
+
+    function update_data($where,$data,$table){
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    }   
+
     function caridata(){
     $c = $this->input->POST ('cari');
     $this->db->like('nama_pemilik', $c);

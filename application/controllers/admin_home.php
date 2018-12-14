@@ -38,20 +38,49 @@ function __construct(){
 		redirect('admin_home');
 	}
 
-	function search(){
+	function edit($id_pemilik){
+	$where = array('id_pemilik' => $id_pemilik);
+	$data['tbl_pemilik'] = $this->Datapemilik_model->edit_data($where,'tbl_pemilik')->result();
+	$this->load->view('admin_view/v_editdatapemilik',$data);
+	}
+
+	function update(){
+	$id_pemilik = $this->input->post('id_pemilik');
+	$nama_pemilik = $this->input->post('nama_pemilik');
+	$alamat = $this->input->post('alamat');
+	$no_hp = $this->input->post('no_hp');
+	$username = $this->input->post('username');
+	$password = $this->input->post('password');
+ 
+	$data = array(
+		'nama_pemilik' => $nama_pemilik,
+		'alamat' => $alamat,
+		'no_hp' => $no_hp,
+		'username' => $username,
+		'password' => $password,
+	);
+ 
+	$where = array(
+		'id_pemilik' => $id_pemilik
+	);
+ 
+	$this->Datapemilik_model->update_data($where,$data,'tbl_pemilik');
+	redirect('admin_home/index');
+}
+ 
+ 	function cari() {
        $data['tampil']=$this->Datapemilik_model->caridata();
        //jika data yang dicari tidak ada maka akan keluar informasi 
        //bahwa data yang dicari tidak ada
        if($data['tampil']==null) {
           print 'maaf data yang anda cari tidak ada atau keywordnya salah';
           print br(2);
-          print anchor('welcome','kembali');
+          print anchor('admin_home','kembali');
           }
           else {
              $this->load->view('admin_view/laman',$data); 
 
 			}
 	}
- 
 }
 ?>

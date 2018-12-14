@@ -12,8 +12,6 @@
   </div>
   <!-- preloader area end -->
   <!-- page container area start -->
-
-<?php $this->load->view('layout_admin/nav');?>
   
     <!-- sidebar menu area end -->
     <!-- main content area start -->
@@ -75,97 +73,54 @@
             <div class="card">
               <div class="card-body">
 
-                <h4 class="header-title mb-0">Tambah Data Pemilik</h4><hr>
-  
-<form action="<?php echo base_url().'admin_home/tambah_data'; ?>" method="post">
-
-
-          <div class="form-group row">
+<h3>Edit Data</h3>
+	</center>
+	<?php foreach($tbl_pemilik as $u){ ?>
+	<form action="<?php echo base_url().'admin_home/update'; ?>" method="post">
+		          <div class="form-group row">
 
           <div class="col-6">
             <h6>ID Pemilik</h6>
-            <input name="id_pemilik" maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Pemilik" id=""
-            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+            <input name="id_pemilik" maxlength="5" class="form-control" type="read_only" value="<?php echo $u->id_pemilik ?>">
           </div>
 
           <div class="col-6">
             <h6>Nama Pemilik Hewan</h6>
-            <input name="nama_pemilik" class="form-control" type="text" placeholder="Masukkan Nama" id=""
-            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+            <input name="nama_pemilik" class="form-control" type="text" value="<?php echo $u->nama_pemilik ?>">
           </div>
         </div>
           
           <div class="form-group">
               <h6>Alamat</h6>
-              <textarea name="alamat"  class="form-control" placeholder="Masukkan Alamat" id=""
-              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"></textarea>
+              <textarea name="alamat"  class="form-control"><?php echo $u->alamat ?></textarea>
           </div>
           
           <div class="form-group">
              <h6>No.HP</h6>
-             <input name="no_hp" maxlength="12" onkeypress="return hanyaAngka(event)" class="form-control"  placeholder="Masukkan No.HP" id=""
-             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+             <input name="no_hp" maxlength="12" onkeypress="return hanyaAngka(event)" class="form-control"  value="<?php echo $u->no_hp ?>">
           </div>
 
           <div class="form-group row">
 
           <div class="col-6">
             <h6>Username</h6>
-            <input name="username" class="form-control" type="text" placeholder="Masukkan Username" id=""
-            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+            <input name="username" class="form-control" type="text" value="<?php echo $u->username ?>">
           </div>
 
           <div class="col-6">
             <h6>Password</h6>
-            <input name="password" class="form-control" type="Password" placeholder="Masukkan Password" id=""
-            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+            <input name="password" class="form-control" type="Password" value="<?php echo $u->password ?>">
           </div>
         </div>
 
 
         <div class="modal-footer d-flex justify-content-center">
-        <button type="submit" class="btn btn-success">Tambah <i class="fa fa-plus ml-1"></i></button>
+        <button type="submit" class="btn btn-success">Simpan <i class="fa fa-save"></i></button>
         <button type="reset"  class="btn btn-danger">Hapus <i class="fa fa-trash"></i></button>
+		<a href="<?php echo base_url().'admin_home'; ?>" class="btn btn-warning">Kembali<i class="fa fa-trash"></i></a>
         </div>
-</form><hr>
-
-  <h4 class="header-title mb-0">Data Pemilik</h4><hr>
-
-<form action="<?php echo base_url().'admin_home/cari'; ?>">
-  <input type="search" name="cari" placeholder="Search Keyword..."> <input type="submit" name="q" value="Search">
 </form>
-
-  <div class="market-status-table mt-4">
-  <div class="table-responsive">
-  <table class="table">
-    <thead class="thead-dark">
-                        <tr>
-                          <th scope="col" class="align-middle text-center">ID Pemilik</th>
-                          <th scope="col" class="align-middle text-center">Nama Pemilik</th>
-                          <th scope="col" class="align-middle text-center">Alamat</th>
-                          <th scope="col" class="align-middle text-center">No HP</th>
-                          <th scope="col" class="align-middle text-center">Username</th>
-                          <th scope="col" class="align-middle text-center" colspan="2">Aksi</th>
-                        </tr>
-    </thead>
-    <tbody>
-    <?php 
-    foreach($tbl_pemilik as $u){ 
-    ?>
-    <tr>
-      <td class="text-center"><?php echo $u->id_pemilik ?></td>
-      <td class="text-left align-middle"><?php echo $u->nama_pemilik ?></td>
-      <td class="text-left align-middle"><?php echo $u->alamat ?></td>
-      <td class="text-left align-middle"><?php echo $u->no_hp ?></td>
-      <td class="text-left align-middle"><?php echo $u->username ?></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_home/edit/'.$u->id_pemilik; ?>" class="btn btn-primary text-center">Edit</a></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_home/hapus/'.$u->id_pemilik; ?>" class="btn btn-danger text-center">Hapus</a></td>
-    </tr>
-    <?php } ?>
-  </tbody>
-  </table>
-                  </div>
-                </div>
+	<?php } ?><hr>
               </div>
             </div>
           </div>
@@ -354,7 +309,7 @@
     function hanyaAngka(evt) {
       var charCode = (evt.which) ? evt.which : event.keyCode
        if (charCode > 31 && (charCode < 48 || charCode > 57))
-
+ 
         return false;
       return true;
     }
