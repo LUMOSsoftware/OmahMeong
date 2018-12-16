@@ -62,70 +62,120 @@
         </div>
       </div>
       <!-- page title area end -->
+
       <div class="main-content-inner">
+
         <!-- overview area start -->
         <!-- overview area end -->
         <!-- market value area start -->
+
         <div class="row mt-5 mb-5">
           <div class="col-12">
             <div class="card">
-              <div class="card-body text-right">
-                <a href="#" class="btn btn-success text-justify m-2" data-toggle="modal" data-target="#dataHewan">+ Tambah Data</a>
-                <div class="d-sm-flex justify-content-between align-items-center">
-                  <h4 class="header-title mb-0">Data Hewan</h4>
-                  <select class="custome-select border-0 pr-3">
-                    <option selected="">Last 24 Hours</option>
-                    <option value="0">01 July 2018</option>
-                  </select>
-                </div>
-                              <div class="market-status-table mt-4">
-                  <div class="table-responsive">
-                    <table class="table">
-                      <thead class="thead-dark">
+              <div class="card-body">
+
+                <h4 class="header-title mb-0">Tambah Data Hewan</h4><hr>
+  
+<form action="<?php echo base_url().'admin_data_hewan/tambah_data'; ?>" method="post">
+
+          <div class="form-group row">
+
+          <div class="col-6">
+            <h6>ID Hewan</h6>
+            <input name="id_hewan" maxlength="10" class="form-control" type="text" placeholder="Masukkan ID Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="col-6">
+            <h6>ID Pemilik</h6>
+            <input name="id_pemilik" maxlength="10" class="form-control" type="text" placeholder="Masukkan ID Pemilik" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+        </div>
+        <div class="form-group row">
+
+          <div class="col-6">
+            <h6>Nama Hewan</h6>
+            <input name="nama_hewan" class="form-control" type="text" placeholder="Masukkan Nama Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="col-6">
+            <h6>Umur Hewan</h6>
+             <input name="umur_hewan" maxlength="5" onkeypress="return hanyaAngka(event)" class="form-control"  placeholder="Masukkan Umur Hewan" id=""
+             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+        </div>
+        <div class="form-group row">
+
+          <div class="col-6">
+            <h6>Jenis Hewan</h6>
+            <input name="jenis_hewan" class="form-control" type="text" placeholder="Masukkan Jenis Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="col-6">
+            <h6>Jenis Kelamin Hewan</h6>
+            <input name="jenis_kelamin_hewan" class="form-control" type="text" placeholder="Masukkan Jenis Kelamin Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+        </div>
+          <div class="form-group">
+              <h6>Ciri - Ciri Spesifik Hewan</h6>
+              <textarea name="ciri_spesifik"  class="form-control" placeholder="Masukkan Ciri - Ciri Spesifik Hewan" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"></textarea>
+          </div>
+          
+          <div class="form-group">
+            </div>
+          </div>
+
+
+        <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" class="btn btn-success">Tambah <i class="fa fa-plus ml-1"></i></button>
+        <button type="reset"  class="btn btn-danger">Hapus <i class="fa fa-trash"></i></button>
+        </div>
+</form><hr>
+
+  <h4 class="header-title mb-0">Data Hewan</h4><hr>
+
+<form action="<?php echo base_url().'admin_data_hewan/cari'; ?>">
+  <input type="search" name="cari" placeholder="Search Keyword..."> <input type="submit" name="q" value="Search">
+</form>
+
+  <div class="market-status-table mt-4">
+  <div class="table-responsive">
+  <table class="table">
+    <thead class="thead-dark">
                         <tr>
-                          <th scope="col" class="align-middle text-center">No.</th>
                           <th scope="col" class="align-middle text-center">ID Hewan</th>
+                          <th scope="col" class="align-middle text-center">ID Pemilik</th>
                           <th scope="col" class="align-middle text-center">Nama Hewan</th>
                           <th scope="col" class="align-middle text-center">Jenis Hewan</th>
                           <th scope="col" class="align-middle text-center">Jenis Kelamin Hewan</th>
                           <th scope="col" class="align-middle text-center">Umur Hewan</th>
-                          <th scope="col" class="align-middle text-center">Ciri Spesifik</th>
-                          <th scope="col" class="align-middle text-center">ID Pemilik</th>
-                          <th scope="col" class="align-middle text-center">Nama Pemilik</th>
+                          <th scope="col" class="align-middle text-center">Ciri-Ciri Spesifik Hewan</th>
                           <th scope="col" class="align-middle text-center" colspan="2">Aksi</th>
                         </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row" class="text-center align-middle">1</th>
-                          <td class="text-left align-middle">H001</td>
-                          <td class="text-left align-middle">Coki</td>
-                          <td class="text-center align-middle">Kucing Persia</td>
-                          <td class="text-center align-middle">Jantan</td>
-                          <td class="text-center align-middle">1 tahun</td>
-                          <td class="text-center align-middle">Bulu Abu-abu</td>
-                          <td class="text-center align-middle">P001</td>
-                          <td class="text-center align-middle">Mark</td>
-                          <td class="text-center"><a href="#" class="btn btn-primary text-center" data-toggle="modal" data-target="#edit_dataHewan">Edit</a></td>
-                          <td><a href="#" class="btn btn-danger text-center">Hapus</a></td>
-                        </tr>
-
-                        <tr>
-                          <th scope="row" class="text-center align-middle"">2</th>
-                          <td class="text-left align-middle">H002</td>
-                          <td class="text-left align-middle">Ciko</td>
-                          <td class="text-center align-middle">Kucing Scootishfold</td>
-                          <td class="text-center align-middle">Betina</td>
-                          <td class="text-center align-middle">2 tahun</td>
-                          <td class="text-center align-middle">Bulu Putih Abu-abu</td>
-                          <td class="text-center align-middle">P002</td>
-                          <td class="text-center align-middle">Jacob</td>
-                          <td class="text-center align-middle"><a href="#" class="btn btn-primary text-center">Edit</a></td>
-                          <td><a href="#" class="btn btn-danger text-center">Hapus</a></td>
-                        </tr>
-                      </tbody>
-                      <tbody></tbody>
-                    </table>
+    </thead>
+    <tbody>
+    <?php 
+    foreach($tbl_hewan as $u){ 
+    ?>
+    <tr>
+      <td class="text-center"><?php echo $u->id_hewan ?></td>
+      <td class="text-center"><?php echo $u->id_pemilik ?></td>
+      <td class="text-left align-middle"><?php echo $u->nama_hewan ?></td>
+      <td class="text-left align-middle"><?php echo $u->jenis_hewan ?></td>
+      <td class="text-left align-middle"><?php echo $u->jenis_kelamin_hewan ?></td>
+      <td class="text-left align-middle"><?php echo $u->umur_hewan ?></td>
+      <td class="text-center"><?php echo $u->ciri_spesifik ?></td>
+      <td class="text-center"><a href="<?php echo base_url().'admin_data_hewan/edit/'.$u->id_hewan; ?>" class="btn btn-primary text-center">Edit</a></td>
+      <td class="text-center"><a href="<?php echo base_url().'admin_data_hewan/hapus/'.$u->id_hewan; ?>" class="btn btn-danger text-center">Hapus</a></td>
+    </tr>
+    <?php } ?>
+  </tbody>
+  </table>
                   </div>
                 </div>
               </div>
@@ -142,6 +192,7 @@
   <!-- page container area end -->
   <!-- offset area start -->
 <!--form input-->
+<!--
 <div class="modal fade" id="dataHewan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -217,9 +268,10 @@
     </div>
   </div>
 </div>
+--->
 
 <!--form EDIT-->
-<div class="modal fade" id="edit_dataHewan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<!--<div class="modal fade" id="edit_dataHewan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -294,7 +346,7 @@
     </div>
   </div>
 </div>
-
+-->
 
 
   <!-- input angka only -->
