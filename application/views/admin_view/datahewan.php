@@ -106,8 +106,8 @@
              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
         </div>
-        <div class="form-group row">
 
+        <div class="form-group row">
           <div class="col-6">
             <h6>Jenis Hewan</h6>
             <input name="jenis_hewan" class="form-control" type="text" placeholder="Masukkan Jenis Hewan" id=""
@@ -116,8 +116,11 @@
 
           <div class="col-6">
             <h6>Jenis Kelamin Hewan</h6>
-            <input name="jenis_kelamin_hewan" class="form-control" type="text" placeholder="Masukkan Jenis Kelamin Hewan" id=""
-            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+            <select  name="jenis_kelamin_hewan" class="form-control form-control-lg" value="---Pilih Jenis Kelamin Hewan---"
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')" >
+                <option>Jantan</option>
+                <option>Betina</option>
+            </select >
           </div>
         </div>
           <div class="form-group">
