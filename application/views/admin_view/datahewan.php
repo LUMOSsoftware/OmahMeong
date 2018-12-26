@@ -35,15 +35,9 @@
           </div>
           <!-- profile info & task notification -->
           <div class="col-md-6 col-sm-4 clearfix">
-          <ul class="notification-area pull-right">
           <div class="user-profile pull-right">
               <img class="avatar user-thumb" src="<?php echo base_url();?>assets/admin/images/author/avatar.png" alt="avatar">
               <h4 class="user-name dropdown-toggle" data-toggle="dropdown">ADMIN<i class="fa fa-angle-down"></i></h4>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Keluar</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
       <!-- header area end -->
