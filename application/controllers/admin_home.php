@@ -7,8 +7,6 @@ function __construct(){
 			redirect('/admin');	
 			}	
 		$this->load->model('Datapasien_model');
-		
- 
 	}
  
 	function index(){
