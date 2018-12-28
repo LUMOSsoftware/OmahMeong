@@ -45,7 +45,7 @@
                 <a href="admin_data_user" aria-expanded="true"><i class="fa fa-users"></i><span>Akun Admin</span></a>
               </li>
               <li>
-                <a href="admin_data_user" aria-expanded="true"><i class=""></i><span>KELUAR</span></a>
+                <a href="<?php echo base_url().'admin/logout'?>"><i ></i><span>KELUAR</span></a>
               </li>
             </ul>
           </nav>
