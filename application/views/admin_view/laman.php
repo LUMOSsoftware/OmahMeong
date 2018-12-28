@@ -51,8 +51,8 @@
             <div class="breadcrumbs-area p-4 clearfix">
               <h4 class="page-title pull-left">Beranda</h4>
               <ul class="breadcrumbs pull-left">
-                <li><a href="admin_home">Data</a></li>
-                <li><span>Data Pemilik</span></li>
+                <li><a href="admin_home">Pendaftaran</a></li>
+                <li><span>Pasien Baru</span></li>
               </ul>
             </div>
           </div>
@@ -70,25 +70,19 @@
             <div class="card">
               <div class="card-body">
 
-                <h4 class="header-title mb-0">Tambah Data Pemilik</h4><hr>
+                <h2 class="text-center">Pasien Baru</h2><hr>
   
+<?=$this->session->flashdata('notif')?>
 <form action="<?php echo base_url().'admin_home/tambah_data'; ?>" method="post">
 
 
           <div class="form-group row">
-
           <div class="col-6">
-            <h6>ID Pemilik</h6>
-            <input name="id_pemilik" maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Pemilik" id=""
+            <h6>Nama Pemilik</h6>
+            <input name="nama_pemilik" class="form-control" type="text" placeholder="Masukkan Nama Pemilik" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
-
-          <div class="col-6">
-            <h6>Nama Pemilik Hewan</h6>
-            <input name="nama_pemilik" class="form-control" type="text" placeholder="Masukkan Nama" id=""
-            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
-        </div>
           
           <div class="form-group">
               <h6>Alamat</h6>
@@ -97,25 +91,48 @@
           </div>
           
           <div class="form-group">
-             <h6>No.HP</h6>
-             <input name="no_hp" maxlength="12" onkeypress="return hanyaAngka(event)" class="form-control"  placeholder="Masukkan No.HP" id=""
+             <h6>No.Telp</h6>
+             <input name="no_tlp" maxlength="12" onkeypress="return hanyaAngka(event)" class="form-control"  placeholder="Masukkan No.Telp" id=""
              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
           <div class="form-group row">
-
           <div class="col-6">
-            <h6>Username</h6>
-            <input name="username" class="form-control" type="text" placeholder="Masukkan Username" id=""
+            <h6>Nama Hewan</h6>
+            <input name="nama_hewan" class="form-control" type="text" placeholder="Masukkan Nama Hewan" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
 
           <div class="col-6">
-            <h6>Password</h6>
-            <input name="password" class="form-control" type="Password" placeholder="Masukkan Password" id=""
+            <h6>Umur Hewan (Tahun)</h6>
+            <input name="umur_hewan" onkeypress="return hanyaAngka(event)" class="form-control" maxlength="2" placeholder="Masukkan Umur Hewan" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
         </div>
+
+          <div class="form-group">
+              <h6>Warna / Ciri Spesifik Hewan</h6>
+              <textarea name="ciri_spesifik"  class="form-control" placeholder="Masukkan Warna / Ciri Spesifik Hewan" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"></textarea>
+          </div>
+
+          <div class="form-group row">
+          <div class="col-6">
+            <h6>Jenis Hewan</h6>
+            <input name="jenis_hewan" class="form-control" type="text" placeholder="Masukkan Jenis Hewan" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="col-6">
+            <h6>Jenis Kelamin Hewan</h6>
+            <select  name="jk_hewan" class="form-control form-control-lg" value="---Pilih Jenis Kelamin Hewan---"
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')" >
+                <option>Jantan</option>
+                <option>Betina</option>
+            </select >
+          </div>
+        </div>
+      </div>
 
 
         <div class="modal-footer d-flex justify-content-center">
@@ -124,6 +141,8 @@
         </div>
 </form><hr>
 
+
+<!--
   <h4 class="header-title mb-0">Data Pemilik</h4><hr>
 
 <form action="<?php echo base_url().'admin_home/cari'; ?>">
@@ -161,6 +180,8 @@
   </table>
                   </div>
                 </div>
+
+-->
               </div>
             </div>
           </div>

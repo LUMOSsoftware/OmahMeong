@@ -21,7 +21,7 @@
                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-database""></i><span>Data</span></a>
                 <ul class="collapse">
                   <li class=""><a href="admin_home">Data Pendaftaran</a></li>
-                  <li><a href="admin_data_kamar">Data Pasien</a></li>
+                  <li><a href="admin_data_pasien">Data Pasien</a></li>
                   <li><a href="admin_data_kamar">Data Pemeriksaan Pasien</a></li>
                 </ul>
               </li>

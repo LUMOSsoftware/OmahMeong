@@ -1,9 +1,12 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Datapemilik_model extends CI_Model
+class Datapasien_model extends CI_Model
 {
+    
+
+    
     function tampil_data(){
-        return $this->db->get('tbl_pemilik');
+        return $this->db->get('tbl_pasien');
     }
  
     function input_data($data,$table){
@@ -23,12 +26,5 @@ class Datapemilik_model extends CI_Model
         $this->db->where($where);
         $this->db->update($table,$data);
     }   
-
-    function caridata(){
-    $c = $this->input->POST ('cari');
-    $this->db->like('nama_pemilik', $c);
-    $query = $this->db->get ('tbl_pemilik');
-    return $query->result(); 
-    }
 
 }
