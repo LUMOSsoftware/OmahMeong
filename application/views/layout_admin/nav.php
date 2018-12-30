@@ -11,16 +11,11 @@
           <nav>
             <ul class="metismenu" id="menu">
               <li class="active">
-                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-database""></i><span>Pendaftaran</span></a>
-                <ul class="collapse">
-                  <li class=""><a href="admin_home">Pasien Baru</a></li>
-                  <li><a href="admin_data_hewan">Pasien Lama</a></li>
-                </ul>
+                <a href="admin_home"><i class="fa fa-database""></i><span>Pendaftaran Pasien</span></a>
               </li>
               <li>
                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-database""></i><span>Data</span></a>
                 <ul class="collapse">
-                  <li class=""><a href="admin_home">Data Pendaftaran</a></li>
                   <li><a href="admin_data_pasien">Data Pasien</a></li>
                   <li><a href="admin_data_kamar">Data Pemeriksaan Pasien</a></li>
                 </ul>

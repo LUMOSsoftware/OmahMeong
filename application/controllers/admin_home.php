@@ -35,7 +35,7 @@ function __construct(){
 			'jk_hewan' => $jk_hewan,
 			'tgl_daftar' => $tgldaftar
 			);
-		$this->Datapemilik_model->input_data($data,'tbl_pasien');
+		$this->Datapasien_model->input_data($data,'tbl_pasien');
 		$this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 		redirect('admin_home');
 
