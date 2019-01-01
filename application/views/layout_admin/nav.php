@@ -11,11 +11,16 @@
           <nav>
             <ul class="metismenu" id="menu">
               <li class="active">
-                <a href="admin_home"><i class="fa fa-database""></i><span>Pendaftaran Pasien</span></a>
+                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-database""></i><span>Pendaftaran</span></a>
+                <ul class="collapse">
+                  <li class=""><a href="admin_home">Pasien Baru</a></li>
+                  <li><a href="admin_data_hewan">Pasien Lama</a></li>
+                </ul>
               </li>
               <li>
                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-database""></i><span>Data</span></a>
                 <ul class="collapse">
+                  <li class=""><a href="admin_home">Data Pendaftaran</a></li>
                   <li><a href="admin_data_pasien">Data Pasien</a></li>
                   <li><a href="admin_data_kamar">Data Pemeriksaan Pasien</a></li>
                 </ul>
@@ -32,8 +37,8 @@
               <li>
                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-database""></i><span>Daftar Harga</span></a>
                 <ul class="collapse">
-                  <li class=""><a href="admin_home">Tindakan</a></li>
-                  <li><a href="admin_data_kamar">Obat</a></li>
+                  <li class=""><a href="admin_tindakan">Tindakan</a></li>
+                  <li><a href="admin_obat">Obat</a></li>
                 </ul>
               </li>
               <li>
