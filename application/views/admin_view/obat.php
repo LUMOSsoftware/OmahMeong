@@ -84,7 +84,7 @@
         <div class="form-group row">
           <div class="col-6">
             <h6>Nama Obat</h6>
-            <input name="nama_obat"  maxlength="20" class="form-control" type="text" placeholder="Masukkan Nama Obat" id=""
+            <input name="nama_obat" class="form-control" type="text" placeholder="Masukkan Nama Obat" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
          </div>
@@ -127,11 +127,11 @@
     foreach($tbl_obat as $u){ 
     ?>
     <tr>
-      <td class="text-center"><?php echo $u->id_obat ?></td>
-      <td class="text-left align-middle"><?php echo $u->nama_obat ?></td>
-      <td class="text-left align-middle"><?php echo $u->harga_obat ?></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_obat/edit/'.$u->id_obat; ?>" class="btn btn-primary text-center">Edit</a></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_obat/hapus/'.$u->id_obat; ?>" class="btn btn-danger text-center">Hapus</a></td>
+      <td class="align-middle text-center"><?php echo $u->id_obat ?></td>
+      <td class="align-middle text-center"><?php echo $u->nama_obat ?></td>
+      <td class="align-middle text-center"><?php echo $u->harga_obat ?></td>
+      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_obat/edit/'.$u->id_obat; ?>" class="btn btn-primary text-center">Edit</a></td>
+      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_obat/hapus/'.$u->id_obat; ?>" class="btn btn-danger text-center">Hapus</a></td>
     </tr>
     <?php } ?>
   </tbody>

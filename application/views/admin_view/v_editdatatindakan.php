@@ -65,28 +65,30 @@
           <div class="form-group row">
           <div class="col-6">
             <h6>ID Tindakan</h6>
-            <input name="id_tindakan" maxlength="5" class="form-control" type="read_only" value="<?php echo $u->id_tindakan ?>">
+            <input name="id_tindakan" maxlength="6" class="form-control" type="read_only" value="<?php echo $u->id_tindakan ?>" readonly>
           </div>
          </div>
 
           <div class="form-group row">
           <div class="col-6">
             <h6>Nama Tindakan</h6>
-            <input name="nama_tindakan" maxlength="12" class="form-control" type="read_only" value="<?php echo $u->nama_tindakan ?>">
+            <input name="nama_tindakan" class="form-control" type="read_only" value="<?php echo $u->nama_tindakan ?>">
           </div>
          </div>
 
           <div class="form-group row">
           <div class="col-6">
             <h6>Harga</h6>
-            <input name="harga" maxlength="8" onkeypress="return hanyaAngka(event)" class="form-control" type="text" value="<?php echo $u->harga ?>">
+            <input name="harga" maxlength="7" onkeypress="return hanyaAngka(event)" class="form-control" type="text" value="<?php echo $u->harga ?>">
           </div>
          </div>
 
           <div class="form-group row">
           <div class="col-6">
               <h6>Keterangan</h6>
-              <textarea name="keterangan" maxlength="12" class="form-control" value="<?php echo $u->keterangan ?>"></textarea>
+              <textarea name="keterangan" class="form-control">
+                <?php echo $u->keterangan ?>
+              </textarea>
           </div>
         </div>
 

@@ -116,34 +116,38 @@ function __construct(){
         $pdf->Output();
 	}
 
-	function edit($id_pemilik){
-	$where = array('id_pemilik' => $id_pemilik);
-	$data['tbl_pemilik'] = $this->Datapemilik_model->edit_data($where,'tbl_pemilik')->result();
-	$this->load->view('admin_view/v_editdatapemilik',$data);
+	function edit($no_rm){
+	$where = array('no_rm' => $no_rm);
+	$data['tbl_pasien'] = $this->Datapasien_model->edit_data($where,'tbl_pasien')->result();
+	$this->load->view('admin_view/v_editdatapasien',$data);
 	}
 
 	function update(){
-	$id_pemilik = $this->input->post('id_pemilik');
-	$nama_pemilik = $this->input->post('nama_pemilik');
-	$alamat = $this->input->post('alamat');
-	$no_hp = $this->input->post('no_hp');
-	$username = $this->input->post('username');
-	$password = $this->input->post('password');
- 
-	$data = array(
-		'nama_pemilik' => $nama_pemilik,
-		'alamat' => $alamat,
-		'no_hp' => $no_hp,
-		'username' => $username,
-		'password' => $password,
-	);
+		$nama_pemilik = $this->input->post('nama_pemilik');
+		$alamat = $this->input->post('alamat');
+		$no_tlp = $this->input->post('no_tlp');
+		$nama_hewan = $this->input->post('nama_hewan');
+		$umur_hewan = $this->input->post('umur_hewan');
+		$ciri_spesifik = $this->input->post('ciri_spesifik');
+		$jenis_hewan = $this->input->post('jenis_hewan');
+		$jk_hewan = $this->input->post('jk_hewan');
+		$data = array(
+			'nama_pemilik' => $nama_pemilik,
+			'alamat' => $alamat,
+			'no_tlp' => $no_tlp,
+			'nama_hewan' => $nama_hewan,
+			'umur_hewan' => $umur_hewan,
+			'ciri_spesifik' => $ciri_spesifik,
+			'jenis_hewan' => $jenis_hewan,
+			'jk_hewan' => $jk_hewan
+			);
  
 	$where = array(
-		'id_pemilik' => $id_pemilik
+		'no_rm' => $no_rm
 	);
  
-	$this->Datapemilik_model->update_data($where,$data,'tbl_pemilik');
-	redirect('admin_home/index');
+	$this->Datapasien_model->update_data($where,$data,'tbl_pasien');
+	redirect('admin_data_pasien');
 	}
  
  	function cari() {
