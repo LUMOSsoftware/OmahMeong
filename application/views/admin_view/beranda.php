@@ -118,25 +118,64 @@
                                     </div>
                                     <div class="tab-content" id="v-pills-tabContent">
                                         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab text-justify">
-                                            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                            <p class="text-justify">Dalam Menu Pendaftaran Pasien, disediakan form untuk menambahkan data pasien baru yang akan didaftarkan. Dalam fitur ini admin dapat menginputkan data – data yang sesuai dengan kebutuhan pada form yang telah disediakan. Admin dapat menginputkan data seperti nama pasien, alamat, no tlp, nama hewan, umur hewan dan sebagainya.<br>
+                                            Terdapat 2 tombol yang memiliki fungsi masing – masing pada fitur Pendaftaran Pasien ini, tombol seperti berikut :<br>
+                                            <img src="<?php echo base_url(); ?>assets/admin/images/icon/btn.jpg"><br>
+                                            <li>
+                                              Tombol Tambah
+                                            </li>
+                                            Tombol ini berfungsi untuk menyimpan / menambahkan data yang sudah di input melalui form kedalam database sistem.<br><br>
+                                            <li>
+                                              Tombol Hapus
+                                            </li>
+                                            Tombol ini berfungsi untuk menghapus / reset data yang diinputkan pada form. Tombol ini dapat digunakan ketika admin salah mengisi form.<br><br>
+                                            Setelah men-klik tombol Tambah maka akan muncul peringatan data berhasil di tambahkan.
+                                            </p>
                                         </div>
                                         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab text-justify">
-                                            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                            <p class="text-justify">Menu Data Pasien ini berfungsi bagi admin untuk melihat data – data dari pasien yang sudah di daftarkan di menu Pendaftaran Pasien terlebih dahulu.<br>
+                                            Terdapat 3 tombol yang memiliki fungsi berbeda – beda di setiap kolom berasarkan data pasien tersebut. yaitu :
+                                            <li>
+                                              Tombol Edit
+                                            </li>
+                                            Tombol ini berfungsi untuk mengedit data pasien jika dibutuhkan.<br><br>
+                                            <li>
+                                              Tombol Hapus
+                                            </li>
+                                            Tombol ini berfungsi untuk menghapus data pasien tertentu jika di butuhkan.<br><br>
+                                            <li>
+                                              Tombol Cetak
+                                            </li>
+                                            Tombol ini berfungsi untuk mencetak Kartu Pasien.<br><br>
+                                            <h4>Cetak</h4>
+                                            Setelah men-klik tombol cetak, maka pengguna secara otomatis mendownload file pdf untuk mencetak kartu pasien. Setelah anda mendownload dokumen tersebut maka hasilnya akan tercetak Kartu Pasien sesuai dengan data pasien yang anda pilih.
+                                            </p>
                                         </div>
                                         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab text-justify">
-                                            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                            <p class="text-justify">Dalam Menu Pemeriksaan Admin dapat mengisi form untuk pemeriksaan pasien. Dalam form ini Admin harus mengetahui Nomor Registrasi Pasien terlebih dahulu untuk di inputkan ke dalam form. Kemudian dalam menu ini, dapat juga menambahkan tindakan serta obat yang diberikan kepada pasien.
+</p>
                                         </div>
                                         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab text-justify">
-                                            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                            <p class="text-justify">Dalam Menu Transaksi ini Admin dapat melihat detail transaksi dari hasil pemeriksaan terhadap pasien sebelumnya. Pada Menu ini akan muncul jumlah total biaya yang sesuai dengan hasil pemeriksaan.</p>
                                         </div>
                                         <div class="tab-pane fade" id="v-pills-laporan" role="tabpanel" aria-labelledby="v-pills-laporan-tab text-justify">
-                                            <p class="text-justify">Laporan.</p>
+                                            <p class="text-justify">Menu Laporan berfungsi untuk melihat laporan pemeriksaan yang sudah di lakukan sebelumnya.</p>
                                         </div>
                                         <div class="tab-pane fade" id="v-pills-daftarharga" role="tabpanel" aria-labelledby="v-pills-daftarharga-tab text-justify">
-                                            <p class="text-justify">Daftar Harga.</p>
+                                            <p class="text-justify">Pada Menu Daftar Harga terdapat 2 sub Menu yaitu : <br>
+                                            <li>
+                                              List Tindakan
+                                            </li>
+                                            Pada sub menu ini berfungsi untuk melihat, mengedit, dan menambahkan daftar tindakan   serta harga setiap tindakan yang akan diterapkan pada klinik tersebut.<br><br>
+                                             
+                                            <li>
+                                              List Obat
+                                            </li>
+                                            pada sub menu list obat ini berfungsi untuk melihat, mengedit, dan menambahkan daftar obat serta harga obat yang akan di gunakan pada klinik tersebut. <br><br>
+                                            </p>
                                         </div>
                                         <div class="tab-pane fade" id="v-pills-admin" role="tabpanel" aria-labelledby="v-pills-admin-tab text-justify">
-                                            <p class="text-justify">Akun Admin.</p>
+                                            <p class="text-justify">Akun Admin adalah menu yang berfungsi untuk melihat data akun admin yang dapat digunakan untuk masuk / login kedalam SI Klinik Hewan Berbasis Web ini. Dalam menu ini, juga dapat menambahkan akun baru.</p>
                                         </div>
                                     </div>
                                 </div>

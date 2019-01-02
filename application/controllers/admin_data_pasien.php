@@ -51,6 +51,7 @@ function __construct(){
 	function cetak() { 
 		$pdf = new FPDF('l','mm','A5');
         // membuat halaman baru
+
         $pdf->AddPage();
         // setting jenis font yang akan digunakan
         $pdf->SetFont('Arial','B',16);

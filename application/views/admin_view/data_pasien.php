@@ -108,9 +108,9 @@
       <td class="text-center"><?php echo $u->jenis_hewan ?></td>
       <td class="text-center"><?php echo $u->jk_hewan ?></td>
       <td class="text-center"><?php echo $u->tgl_daftar ?></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/edit/'.$u->no_rm; ?>" class="btn btn-primary text-center">Edit</a></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/hapus/'.$u->no_rm; ?>" class="btn btn-danger text-center">Hapus</a></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/cetak/'.$u->no_rm; ?>" class="btn btn-success text-center">Cetak</a></td>
+      <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/edit/'.$u->no_rm; ?>" class="btn btn-primary text-center"><i class="fa fa-edit"></i> Edit</a></td>
+      <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/hapus/'.$u->no_rm; ?>" class="btn btn-danger text-center"><i class="fa fa-trash-o"></i> Hapus</a></td>
+      <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/cetak/'.$u->no_rm; ?>" class="btn btn-success text-center"><i class="fa fa-print"></i> Cetak</a></td>
     <?php } ?>
 
 
@@ -131,6 +131,7 @@
   <div class="table-responsive">
   <table class="table">
     <thead class="thead-dark">
+          
                         <tr>
                           <th scope="col" class="align-middle text-center">ID Pemilik</th>
                           <th scope="col" class="align-middle text-center">Nama Pemilik</th>

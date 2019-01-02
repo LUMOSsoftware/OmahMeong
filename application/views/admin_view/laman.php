@@ -105,7 +105,7 @@
           </div>
 
           <div class="col-6">
-            <h6>Umur Hewan (Tahun)</h6>
+            <h6>Umur Hewan (Bulan)</h6>
             <input name="umur_hewan" onkeypress="return hanyaAngka(event)" class="form-control" maxlength="2" placeholder="Masukkan Umur Hewan" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
