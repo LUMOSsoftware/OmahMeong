@@ -65,14 +65,14 @@
           <div class="form-group row">
           <div class="col-6">
             <h6>ID Obat</h6>
-            <input name="id_obat" maxlength="5" class="form-control" type="read_only" value="<?php echo $u->id_obat ?>">
+            <input name="id_obat" maxlength="5" class="form-control" type="read_only" value="<?php echo $u->id_obat ?>" readonly>
           </div>
          </div>
 
           <div class="form-group row">
           <div class="col-6">
             <h6>Nama Obat</h6>
-            <input name="nama_obat" maxlength="12" class="form-control" type="read_only" value="<?php echo $u->nama_obat ?>">
+            <input name="nama_obat"  class="form-control" type="read_only" value="<?php echo $u->nama_obat ?>">
           </div>
          </div>
 

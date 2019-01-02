@@ -76,7 +76,7 @@
         <div class="form-group row">
           <div class="col-6">
             <h6>ID Tindakan</h6>
-            <input name="id_tindakan" maxlength="5" class="form-control" type="text" placeholder="Masukkan ID Tindakan" id=""
+            <input name="id_tindakan" maxlength="6" class="form-control" type="text" placeholder="Masukkan ID Tindakan" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
         </div>
@@ -84,7 +84,7 @@
         <div class="form-group row">
           <div class="col-6">
             <h6>Nama Tindakan</h6>
-            <input name="nama_tindakan"  maxlength="12" class="form-control" type="text" placeholder="Masukkan Nama Tindakan" id=""
+            <input name="nama_tindakan" class="form-control" type="text" placeholder="Masukkan Nama Tindakan" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
          </div>
@@ -100,7 +100,7 @@
         <div class="form-group row">
           <div class="col-6">
             <h6>Keterangan</h6>
-            <textarea name="keterangan" maxlength="20" class="form-control" placeholder="Masukkan Tentang Keterangan" id=""
+            <textarea name="keterangan" class="form-control" placeholder="Masukkan Tentang Keterangan" id=""
               required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')"></textarea>
            </div>
         </div>
@@ -136,12 +136,12 @@
     foreach($tbl_tindakan as $u){ 
     ?>
     <tr>
-      <td class="text-center"><?php echo $u->id_tindakan ?></td>
-      <td class="text-left align-middle"><?php echo $u->nama_tindakan ?></td>
-      <td class="text-left align-middle"><?php echo $u->harga ?></td>
-      <td class="text-left align-middle"><?php echo $u->keterangan ?></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_tindakan/edit/'.$u->id_tindakan; ?>" class="btn btn-primary text-center">Edit</a></td>
-      <td class="text-center"><a href="<?php echo base_url().'admin_tindakan/hapus/'.$u->id_tindakan; ?>" class="btn btn-danger text-center">Hapus</a></td>
+      <td class="align-middle text-center"><?php echo $u->id_tindakan ?></td>
+      <td class="align-middle text-center"><?php echo $u->nama_tindakan ?></td>
+      <td class="align-middle text-center"><?php echo $u->harga ?></td>
+      <td class="align-middle text-center"><?php echo $u->keterangan ?></td>
+      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_tindakan/edit/'.$u->id_tindakan; ?>" class="btn btn-primary text-center">Edit</a></td>
+      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_tindakan/hapus/'.$u->id_tindakan; ?>" class="btn btn-danger text-center">Hapus</a></td>
     </tr>
     <?php } ?>
   </tbody>

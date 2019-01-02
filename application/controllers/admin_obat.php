@@ -2,9 +2,11 @@
 	class admin_obat extends CI_Controller {
 
 		function __construct(){
-		parent::__construct();		
+		parent::__construct();
+		if($this->session->userdata('masuk') != TRUE){
+			redirect('/admin');	
+			}			
 		$this->load->model('Dataobat_model');
-
 		}
 			function index(){
 		$data['tbl_obat'] = $this->Dataobat_model->tampil_data()->result();
@@ -21,6 +23,7 @@
 			'harga_obat' => $harga_obat,
 			);
 		$this->Dataobat_model->input_data($data,'tbl_obat');
+		$this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 		redirect('admin_obat');
 	}
 
