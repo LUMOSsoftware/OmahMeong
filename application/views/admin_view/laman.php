@@ -58,6 +58,7 @@
           </div>
         </div>
       </div>
+    </div>
       <!-- page title area end -->
 
 <div class="main-content-inner">
@@ -185,7 +186,10 @@
               </div>
             </div>
           </div>
-        </div>
+
+
+
+
 
 <!--
       <div class="main-content-inner">
