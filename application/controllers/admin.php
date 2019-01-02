@@ -22,7 +22,7 @@
 							$this->session->set_userdata('akses','3');
 							$this->session->set_userdata('ses_id',$data['nim']);
 							$this->session->set_userdata('ses_nama',$data['nama']);
-							redirect('admin_home');
+							redirect('admin_beranda');
 					}else{  // jika username dan password tidak ditemukan atau salah
 							
 							echo $this->session->set_flashdata('msg','Username Atau Password Salah');

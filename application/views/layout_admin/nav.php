@@ -11,6 +11,9 @@
           <nav>
             <ul class="metismenu" id="menu">
               <li class="active">
+                <a href="admin_beranda"><i class="fa fa-database""></i><span>Beranda</span></a>
+              </li>
+              <li class="">
                 <a href="admin_home"><i class="fa fa-database""></i><span>Pendaftaran Pasien</span></a>
               </li>
               <li>

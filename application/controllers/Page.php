@@ -9,10 +9,6 @@ class Page extends CI_Controller{
   }
 
   function index(){
-    $this->load->view('admin_view/laman');
-  }
-
-
-
- 
+    $this->load->view('admin_view/beranda');
+  } 
 }
