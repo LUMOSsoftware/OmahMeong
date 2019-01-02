@@ -59,44 +59,79 @@
 
 <h3>Edit Data</h3>
   </center>
-  <?php foreach($tbl_tindakan as $u){ ?>
-  <form action="<?php echo base_url().'admin_tindakan/update';?>" method="post">
+  <?php foreach($tbl_pasien as $u){ ?>
+  <form action="<?php echo base_url().'admin_data_pasien/update';?>" method="post">
 
-          <div class="form-group row">
+           <div class="form-group row">
           <div class="col-6">
-            <h6>ID Tindakan</h6>
-            <input name="id_tindakan" maxlength="6" class="form-control" type="read_only" value="<?php echo $u->id_tindakan ?>" readonly>
+            <h6>No Reg</h6>
+            <input name="no_rm" maxlength="6" class="form-control" type="read_only" value="<?php echo $u->no_rm ?>" readonly>
           </div>
          </div>
-
           <div class="form-group row">
           <div class="col-6">
-            <h6>Nama Tindakan</h6>
-            <input name="nama_tindakan" class="form-control" type="read_only" value="<?php echo $u->nama_tindakan ?>">
+            <h6>Nama Pemilik</h6>
+            <input name="nama_pemilik" class="form-control" type="text" value="<?php echo $u->nama_pemilik ?>" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
-         </div>
-
-          <div class="form-group row">
-          <div class="col-6">
-            <h6>Harga</h6>
-            <input name="harga" maxlength="7" onkeypress="return hanyaAngka(event)" class="form-control" type="text" value="<?php echo $u->harga ?>">
           </div>
-         </div>
-
-          <div class="form-group row">
-          <div class="col-6">
-              <h6>Keterangan</h6>
-              <textarea name="keterangan" class="form-control">
-                <?php echo $u->keterangan ?>
+          
+          <div class="form-group">
+              <h6>Alamat</h6>
+              <textarea name="alamat"  class="form-control" id=""
+              required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+                <?php echo $u->alamat ?>
               </textarea>
           </div>
+          
+          <div class="form-group">
+             <h6>No.Telp</h6>
+             <input name="no_tlp" maxlength="12" onkeypress="return hanyaAngka(event)" class="form-control"  value="<?php echo $u->no_tlp ?>" id=""
+             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-group row">
+          <div class="col-6">
+            <h6>Nama Hewan</h6>
+            <input name="nama_hewan" class="form-control" type="text" value="<?php echo $u->nama_hewan ?>" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="col-6">
+            <h6>Umur Hewan (Bulan)</h6>
+            <input name="umur_hewan" onkeypress="return hanyaAngka(event)" class="form-control" maxlength="2" value="<?php echo $u->umur_hewan ?>" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
         </div>
+
+          <div class="form-group">
+              <h6>Warna / Ciri Spesifik Hewan</h6>
+              <textarea name="ciri_spesifik"  class="form-control">
+                <?php echo $u->ciri_spesifik ?>
+              </textarea>
+          </div>
+
+          <div class="form-group row">
+          <div class="col-6">
+            <h6>Jenis Hewan</h6>
+            <input name="jenis_hewan" class="form-control" type="text" value="<?php echo $u->jenis_hewan ?>" id=""
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
+          </div>
+
+          <div class="col-6">
+            <h6>Jenis Kelamin Hewan</h6>
+            <select  name="jk_hewan" class="form-control form-control-lg" value="<?php echo $u->jk_hewan?>"
+            required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')" >
+                <option>Jantan</option>
+                <option>Betina</option>
+            </select >
+          </div>
 
 
         <div class="modal-footer d-flex justify-content-center">
         <button type="submit" class="btn btn-success">Simpan <i class="fa fa-save"></i></button>
         <button type="reset" class="btn btn-danger">Reset <i class="fa fa-trash"></i></button>
-        <a href="<?php echo base_url().'admin_tindakan'; ?>" class="btn btn-warning">Kembali<i class="fa fa-trash"></i></a>
+        <a href="<?php echo base_url().'admin_data_pasien'; ?>" class="btn btn-warning">Kembali<i class="fa fa-trash"></i></a>
         </div>
 </form><?php } ?><hr>
              
