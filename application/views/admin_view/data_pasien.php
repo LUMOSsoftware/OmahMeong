@@ -88,7 +88,7 @@
                           <th scope="col" class="align-middle text-center">Jenis Hewan</th>
                           <th scope="col" class="align-middle text-center">Jenis Kelamin Hewan</th>
                           <th scope="col" class="align-middle text-center">Tanggal Daftar</th>
-                          <th scope="col" class="align-middle text-center" colspan="3">Aksi</th>
+                          <th scope="col" class="align-middle text-center" colspan="4">Aksi</th>
                         </tr>
     </thead>
     <tbody>
@@ -111,6 +111,8 @@
       <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/edit/'.$u->no_rm; ?>" class="btn btn-primary text-center"><i class="fa fa-edit"></i> Edit</a></td>
       <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/hapus/'.$u->no_rm; ?>" class="btn btn-danger text-center"><i class="fa fa-trash-o"></i> Hapus</a></td>
       <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/cetak/'.$u->no_rm; ?>" class="btn btn-success text-center"><i class="fa fa-print"></i> Cetak</a></td>
+      <td class="text-center"><a href="<?php echo base_url().'admin_data_pasien/periksa/'.$u->no_rm; ?>" class="btn btn-success text-center"><i class="fa fa-print"></i> Periksa</a></td>
+      
     <?php } ?>
 
 

@@ -100,5 +100,17 @@
 
 			}
 	}
+
+	function pencarianbuku(){
+        $cari=$this->input->post('caribuku');
+        $data['tbl_obat']=$this->Dataperiksa_model->pencarianbuku($cari)->result();
+        $this->load->view('admin_view/pemeriksaan/pencarianbuku',$data);
+    }
+
+     function tampil(){
+        $data['tmp']=$this->Dataperiksa_model->tampilTmp()->result();
+        $data['jumlahTmp']=$this->Dataperiksa_model->jumlahTmp();
+        $this->load->view('admin_view/pemeriksaan/tampil',$data);
+    }
 }
 ?>

@@ -168,5 +168,30 @@ function __construct(){
 
 			}
 	}
+
+	function periksa($no_rm){
+	$where = array('no_rm' => $no_rm);
+	$data['tbl_pasien'] = $this->Datapasien_model->edit_data($where,'tbl_pasien')->result();
+	$this->load->view('admin_view/v_periksapasien',$data);
+	}
+
+	function tambah_data_periksa(){
+		$no_rm = $this->input->post('no_rm');
+		$nama_pemilik = $this->input->post('nama_pemilik');
+		$nama_hewan = $this->input->post('nama_hewan');
+		$jenis_hewan = $this->input->post('jenis_hewan');
+		$data = array(
+			'nama_pemilik' => $nama_pemilik,
+			'nama_hewan' => $nama_hewan,
+			'jenis_hewan' => $jenis_hewan
+			);
+ 
+	$where = array(
+		'no_rm' => $no_rm
+	);
+ 
+	$this->Datapasien_model->input_data_periksa($where,$data,'tbl_periksa');
+	redirect('admin_data_pasien');
+	}
 }
 ?>

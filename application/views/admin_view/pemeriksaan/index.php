@@ -34,7 +34,7 @@
             var no_rm=$("#no_rm").val();
             $.ajax({
                 url:"<?php echo site_url('admin_data_periksa/cariPasien');?>",
-                type:"POST",
+                type:"json",
                 data:"no_rm="+no_rm,
                 cache:false,
                 success:function(html){
@@ -149,7 +149,7 @@
             var caribuku=$("#caribuku").val();
             
             $.ajax({
-                url:"<?php echo site_url('peminjaman/pencarianbuku');?>",
+                url:"<?php echo site_url('admin_data_periksa/pencarianbuku');?>",
                 type:"POST",
                 data:"caribuku="+caribuku,
                 cache:false,
@@ -223,6 +223,70 @@
         </form>
     </div>
 </div>
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        Data Buku
+    </div>
+    
+    <div class="panel-body">
+        <div class="form-inline">
+            <div class="form-group">
+                <label>Kode Buku</label>
+                <input type="text" class="form-control" placeholder="Kode Buku" id="kode">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Judul Buku</label>
+                <input type="text" class="form-control" placeholder="Judul Buku" id="judul" readonly="readonly">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">Pengarang</label>
+                <input type="text" class="form-control" placeholder="Pengarang" id="pengarang" readonly="readonly">
+            </div>
+            <div class="form-group">
+                <button id="tambah" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i></button>
+            </div>
+            <div class="form-group">
+                <button id="cari" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="tampil"></div>
+    
+    <div class="panel-footer">
+        <button id="simpan" class="btn btn-primary"><i class="glyphicon glyphicon-hdd"></i> Simpan</button>
+    </div>
+</div>
+
+
+
+
+ <!-- Modal -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Cari Buku</h4>
+                  </div>
+                  <div class="modal-body">
+                        <div class="form-horizontal">
+                            <label class="col-lg-3 control-label">Cari Nama Buku</label>
+                            <div class="col-lg-5">
+                                <input type="text" name="caribuku" id="caribuku" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <div id="tampilbuku"></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="konfirmasi">Hapus</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
 
 
 <?php $this->load->view('layout_admin/footer');?>

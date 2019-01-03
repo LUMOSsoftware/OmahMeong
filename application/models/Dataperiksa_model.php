@@ -56,4 +56,13 @@ class Dataperiksa_model extends CI_Model{
     return $query->result(); 
     }
 
+    function pencarianbuku($cari){
+        $this->db->like("nama_obat",$cari);
+        return $this->db->get("tbl_obat");
+    }
+
+    function tampilTmp(){
+        return $this->db->get("tmp");
+    }
+
 }
