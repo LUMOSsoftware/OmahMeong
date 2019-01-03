@@ -3,6 +3,14 @@
 class Datapasien_model extends CI_Model
 {
     
+    function semua($limit=10,$offset=0,$order_column='',$order_type='asc'){
+        if(empty($order_column) || empty($order_type))
+            $this->db->order_by($this->primary,'asc');
+        else
+            $this->db->order_by($order_column,$order_type);
+        return $this->db->get($this->table,$limit,$offset);
+    }
+
     function tampil_data(){
         return $this->db->get('tbl_pasien');
     }

@@ -15,6 +15,10 @@ function __construct(){
 		$this->load->view('admin_view/data_pasien',$data);
 	}
  
+	function anggota(){
+        $data['anggota']=$this->Datapasien_model->semua()->result();
+    }
+
 	function tambah_data(){
 		$nama_pemilik = $this->input->post('nama_pemilik');
 		$alamat = $this->input->post('alamat');
