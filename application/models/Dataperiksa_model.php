@@ -1,16 +1,16 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dataperiksa_model extends CI_Model
-{
+class Dataperiksa_model extends CI_Model{
     function tampil_data(){
         return $this->db->get('tbl_periksa');
     }
 
     function nootomatis(){
         $today=date('Ymd');
-        $query=mysqli_query("select max(id_periksa) as last from tbl_periksa where id_periksa like '$today%'");
-        $data=mysqli_fetch_array($query);
-        $lastNoFaktur=$data['last'];
+
+        $query=$this->db->query("select max(id_periksa) as last from tbl_periksa where id_periksa like '$today%'");
+        $data=$query->result_array();
+        $lastNoFaktur=$data[0]['last'];
         
         $lastNoUrut=substr($lastNoFaktur,8,3);
         

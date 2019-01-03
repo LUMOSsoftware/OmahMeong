@@ -32,14 +32,13 @@
         
         $("#no_rm").click(function(){
             var no_rm=$("#no_rm").val();
-            
             $.ajax({
                 url:"<?php echo site_url('admin_data_periksa/cariPasien');?>",
                 type:"POST",
                 data:"no_rm="+no_rm,
                 cache:false,
                 success:function(html){
-                    $("#nama_hewan").val(html);
+                    $("#nama_pemilik").val(html);
                 }
             })
         })
@@ -211,6 +210,13 @@
                     <label class="col-lg-4 control-label">Nama Hewan</label>
                     <div class="col-lg-7">
                         <input type="text" name="nama_hewan" id="nama_hewan" class="form-control">
+                    </div>
+                </div>
+
+                                <div class="form-group">
+                    <label class="col-lg-4 control-label">Nama Pemilik</label>
+                    <div class="col-lg-7">
+                        <input type="text" name="nama_pemilik" id="nama_pemilik" class="form-control">
                     </div>
                 </div>
             </div>

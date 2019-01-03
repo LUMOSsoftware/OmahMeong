@@ -41,10 +41,10 @@
 
 	    function cariPasien(){
         $no_rm=$this->input->post('no_rm');
-        $anggota=$this->Dataperiksa_model->cariPasien($no_rm);
-        if($anggota->num_rows()>0){
-            $anggota=$anggota->row_array();
-            echo $anggota['nama_hewan'];
+        $tbl_pasien=$this->Dataperiksa_model->cariPasien($no_rm);
+        if($tbl_pasien->num_rows()>0){
+            $tbl_pasien=$tbl_pasien->row_array();
+            echo $tbl_pasien['nama_pemilik'];
         }
     }
 
