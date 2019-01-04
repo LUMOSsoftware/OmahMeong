@@ -4,7 +4,7 @@ class Dataobat_model extends CI_Model
 {
     
     function tampil_data(){
-        return $this->db->get('tbl_obat');
+        return $this->db->get('barang');
     }
  
     function input_data($data,$table){

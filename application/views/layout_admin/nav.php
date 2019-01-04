@@ -24,7 +24,7 @@
                 <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-medkit"></i><span>Pemeriksaan</span></a>
               </li>
               <li>
-                <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-balance-scale"></i><span>Transaksi</span></a>
+                <a href="transaksi"><i class="fa fa-balance-scale"></i><span>Transaksi</span></a>
               </li>
               <li>
                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Laporan</span></a>

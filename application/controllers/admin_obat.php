@@ -9,20 +9,22 @@
 		$this->load->model('Dataobat_model');
 		}
 			function index(){
-		$data['tbl_obat'] = $this->Dataobat_model->tampil_data()->result();
+		$data['barang'] = $this->Dataobat_model->tampil_data()->result();
 		$this->load->view('admin_view/obat',$data);
 	}
  
 	function tambah_data(){
-		$id_obat = $this->input->post('id_obat');
-		$nama_obat = $this->input->post('nama_obat');
-		$harga_obat = $this->input->post('harga_obat');
+		$barang_id = $this->input->post('barang_id');
+		$kategori_id = $this->input->post('kategori_id');
+		$nama_barang = $this->input->post('nama_barang');
+		$harga = $this->input->post('harga');
 		$data = array(
-			'id_obat' => $id_obat,
-			'nama_obat' => $nama_obat,
-			'harga_obat' => $harga_obat,
+			'barang_id' => $barang_id,
+			'nama_barang' => $nama_barang,
+			'harga' => $harga
 			);
-		$this->Dataobat_model->input_data($data,'tbl_obat');
+
+		$this->Dataobat_model->input_data($data,'barang');
 		$this->session->set_flashdata('notif','<div class="alert alert-success" role="alert"> Data Berhasil ditambahkan <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
 		redirect('admin_obat');
 	}
@@ -33,23 +35,25 @@
 		redirect('admin_obat');
 	}
 
-	function edit($id_obat){
-	$where = array('id_obat' => $id_obat);
-	$data['tbl_obat'] = $this->Dataobat_model->edit_data($where,'tbl_obat')->result();
+	function edit($barang_id){
+	$where = array('barang_id' => $barang_id);
+	$data['barang'] = $this->Dataobat_model->edit_data($where,'barang')->result();
 	$this->load->view('admin_view/v_editdataobat',$data);
 	}
 
 	function update(){
-	$id_obat = $this->input->post('id_obat');
-	$nama_obat = $this->input->post('nama_obat');
-	$harga_obat = $this->input->post('harga_obat');
+	$barang_id = $this->input->post('barang_id');
+	$kategori_id = $this->input->post('kategori_id');
+	$nama_obat = $this->input->post('nama_barang');
+	$harga_obat = $this->input->post('harga');
 	$data = array(
-		'nama_obat' => $nama_obat,
-		'harga_obat' => $harga_obat,
+		'kategori_id' => $kategori_id,
+		'nama_barang' => $nama_barang,
+		'harga' => $harga
 	);
  
 	$where = array(
-		'id_obat' => $id_obat
+		'barang_id' => $barang_id
 	);
  
 	$this->Dataobat_model->update_data($where,$data,'tbl_obat');

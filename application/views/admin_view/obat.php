@@ -75,8 +75,8 @@
 
         <div class="form-group row">
           <div class="col-6">
-            <h6>ID Obat</h6>
-            <input name="id_obat" maxlength="10" class="form-control" type="text" placeholder="Masukkan ID Obat" id=""
+            <h6>ID Kategori</h6>
+            <input name="kategori_id" maxlength="10" class="form-control" type="text" placeholder="Masukkan ID Obat" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
         </div>
@@ -84,7 +84,7 @@
         <div class="form-group row">
           <div class="col-6">
             <h6>Nama Obat</h6>
-            <input name="nama_obat" class="form-control" type="text" placeholder="Masukkan Nama Obat" id=""
+            <input name="nama_barang" class="form-control" type="text" placeholder="Masukkan Nama Obat" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
           </div>
          </div>
@@ -92,7 +92,7 @@
         <div class="form-group row">
           <div class="col-6">
             <h6>Harga</h6>
-            <input name="harga_obat"  maxlength="10" class="form-control" onkeypress="return hanyaAngka(event)" placeholder="Masukkan Nominal Harga" id=""
+            <input name="harga"  maxlength="10" class="form-control" onkeypress="return hanyaAngka(event)" placeholder="Masukkan Nominal Harga" id=""
             required oninvalid="this.setCustomValidity('Data tidak boleh kosong')" oninput="setCustomValidity('')">
            </div>
         </div>
@@ -118,20 +118,20 @@
                         <tr>
                           <th scope="col" class="align-middle text-center">ID Obat</th>
                           <th scope="col" class="align-middle text-center">Nama Obat</th>
-                          <th scope="col" class="align-middle text-center">Harga</th>
+                          <th scope="col" class="align-middle text-center">Harga (Rp)</th>
                           <th scope="col" class="align-middle text-center" colspan="2">Aksi</th>
                         </tr>
     </thead>
     <tbody>
     <?php 
-    foreach($tbl_obat as $u){ 
+    foreach($barang as $u){ 
     ?>
     <tr>
-      <td class="align-middle text-center"><?php echo $u->id_obat ?></td>
-      <td class="align-middle text-center"><?php echo $u->nama_obat ?></td>
-      <td class="align-middle text-center"><?php echo $u->harga_obat ?></td>
-      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_obat/edit/'.$u->id_obat; ?>" class="btn btn-primary text-center">Edit</a></td>
-      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_obat/hapus/'.$u->id_obat; ?>" class="btn btn-danger text-center">Hapus</a></td>
+      <td class="align-middle text-center"><?php echo $u->barang_id ?></td>
+      <td class="align-middle text-center"><?php echo $u->nama_barang ?></td>
+      <td class="align-middle text-center"><?php echo $u->harga ?></td>
+      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_obat/edit/'.$u->barang_id; ?>" class="btn btn-primary text-center">Edit</a></td>
+      <td class="align-middle text-center"><a href="<?php echo base_url().'admin_obat/hapus/'.$u->barang_id; ?>" class="btn btn-danger text-center">Hapus</a></td>
     </tr>
     <?php } ?>
   </tbody>

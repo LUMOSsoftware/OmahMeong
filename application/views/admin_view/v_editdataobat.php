@@ -59,27 +59,31 @@
 
 <h3>Edit Data</h3>
   </center>
-  <?php foreach($tbl_obat as $u){ ?>
+  <?php foreach($barang as $u){ ?>
   <form action="<?php echo base_url().'admin_obat/update';?>" method="post">
 
           <div class="form-group row">
           <div class="col-6">
             <h6>ID Obat</h6>
-            <input name="id_obat" maxlength="5" class="form-control" type="read_only" value="<?php echo $u->id_obat ?>" readonly>
+            <input name="barang_id" maxlength="5" class="form-control" type="read_only" value="<?php echo $u->barang_id ?>" readonly>
           </div>
          </div>
 
+          <h6>ID Kategori</h6>
+            <input name="kategori_id" maxlength="5" class="form-control" type="read_only" value="<?php echo $u->kategori_id ?>" readonly>
+          </div>
+         </div>
           <div class="form-group row">
           <div class="col-6">
             <h6>Nama Obat</h6>
-            <input name="nama_obat"  class="form-control" type="read_only" value="<?php echo $u->nama_obat ?>">
+            <input name="nama_barang"  class="form-control" type="read_only" value="<?php echo $u->nama_barang ?>">
           </div>
          </div>
 
           <div class="form-group row">
           <div class="col-6">
             <h6>Harga</h6>
-            <input name="harga_obat" maxlength="8" onkeypress="return hanyaAngka(event)" class="form-control" type="text" value="<?php echo $u->harga_obat ?>">
+            <input name="harga" maxlength="8" onkeypress="return hanyaAngka(event)" class="form-control" type="text" value="<?php echo $u->harga ?>">
           </div>
         </div>
 
